@@ -1,0 +1,53 @@
+@font-face {
+  font-family: "Monitorica";
+  src: url("../fonts/Monitorica/OT-ps/Monitorica-Rg.otf");
+}
+
+@font-face {
+  font-family: "Monitorica Bold";
+  src: url("../fonts/Monitorica/OT-ps/Monitorica-Bd.otf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Monitorica Italic";
+  src: url("../fonts/Monitorica/OT-ps/Monitorica-It.otf");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Monitorica Bold Italic";
+  src: url("../fonts/Monitorica/OT-ps/Monitorica-BdIt.otf");
+  font-style: italic;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Timber";
+  src: url("../fonts/Timber");
+}
+
+.brand-logo {
+  font-family: 'Lato', sans-serif;
+}
+
+.brand-logo img {
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.main-heading {
+  font-family: ""
+}
+
+.transparent {
+  opacity: 0;
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  -o-opacity: 0;
+
+}
+
+.side-nav li {
+  
+}
