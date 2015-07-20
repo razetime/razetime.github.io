@@ -1,53 +1,142 @@
 @font-face {
-  font-family: "Monitorica";
-  src: url("../fonts/Monitorica/OT-ps/Monitorica-Rg.otf");
+  font-family: "Arkhip";
+  src: url("../fonts/Arkhip_font/Arkhip_font.ttf");
 }
 
 @font-face {
-  font-family: "Monitorica Bold";
-  src: url("../fonts/Monitorica/OT-ps/Monitorica-Bd.otf");
-  font-weight: bold;
+  font-family: "Bariol";
+  src: url("../fonts/Bariol_Regular/Bariol_Regular.otf");
 }
 
 @font-face {
-  font-family: "Monitorica Italic";
-  src: url("../fonts/Monitorica/OT-ps/Monitorica-It.otf");
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Monitorica Bold Italic";
-  src: url("../fonts/Monitorica/OT-ps/Monitorica-BdIt.otf");
-  font-style: italic;
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: "Timber";
-  src: url("../fonts/Timber");
+  font-family: "Infinity";
+  src: url("../fonts/Infinity/Infinity.ttf");
 }
 
 .brand-logo {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Arkhip', sans-serif;
+  text-transform: uppercase;
 }
 
-.brand-logo img {
-  margin-left: 10px;
-  margin-top: 5px;
-}
+
 
 .main-heading {
-  font-family: ""
+  font-family: "Bariol", sans-serif;
+  font-size: 150px;
+  margin-top: 0px;
+  padding-top: 25px;
 }
 
-.transparent {
-  opacity: 0;
-  -webkit-opacity: 0;
-  -moz-opacity: 0;
-  -o-opacity: 0;
-
+.second-heading {
+  font-size: 70px;
+  font-family: "Infinity", sans-serif;
 }
 
-.side-nav li {
-  
+.side-nav .fa-phone {
+  font-size: 32px;
+  padding-right: 10px;
+}
+
+.jumbotron {
+  height: 100%;
+}
+
+.trans-dark {
+  background-color: rgb(0, 0, 0);
+  border-bottom: #000;
+}
+
+body {
+  left: 0;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Initial menu */
+.menu {
+  left: -285px;  /* start off behind the scenes */
+  height: 100%;
+  position: fixed;
+  width: 285px;
+}
+
+/* Basic styling */
+
+.jumbotron {
+  height: 100%;
+}
+
+.menu ul {
+  border-top: 1px solid #bdbdbd;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  border-bottom: 1px solid #bdbdbd;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 45px;
+  padding-bottom: 3px;
+  padding-top: 3px;
+}
+
+.menu a {
+  color: #fff;
+  font-size: 15px;
+  padding-left: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.icon-close {
+  cursor: pointer;
+  padding-left: 20px;
+  font-size: 32px;
+}
+
+.icon-close .mega-octicon {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+}
+
+
+
+.icon-menu {
+  color: #fff;
+  cursor: pointer;
+  font-size: 32px;
+  padding-bottom: 25px;
+  padding-left: 25px;
+  padding-top: 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.icon-menu i {
+  margin-right: 5px;
+}
+
+.evenout {
+  font-size: 25px;
+  vertical-align: middle;
+}
+
+.menu li {
+  box-sizing: inherit;
+}
+
+.menu li a {
+  box-sizing: padding-box;
+  display: block;
+  font-family: 'Lato', sans-serif;
+  text-decoration: none;
+  outline: 0;
+  border:1px solid rgba(255, 255, 255, 0);
+}
+
+.menu li a:focus {
+  text-decoration: none;
 }

@@ -1,15 +1,26 @@
 var main = function() {
-  // Initialize collapse button
-  $(".button-collapse").sideNav();
-  // Initialize collapsible (uncomment the line below if you use the dropdown variation)
-  $('.collapsible').collapsible();
+  /* Push the body and the nav over by 285px over */
+  $('.icon-menu').click(function() {
+    $('.menu').animate({
+      left: "0px"
+    }, 200);
 
-  $('.button-collapse').sideNav({
-    menuWidth: 300, // Default is 240
-    edge: 'left', // Choose the horizontal origin
-    closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
-  }
-);
-}
+    $('body').animate({
+      left: "285px"
+    }, 200);
+  });
+
+  /* Then push them back */
+  $('.icon-close').click(function() {
+    $('.menu').animate({
+      left: "-285px"
+    }, 200);
+
+    $('body').animate({
+      left: "0px"
+    }, 200);
+  });
+};
+
 
 $(document).ready(main);
