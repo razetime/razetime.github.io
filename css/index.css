@@ -22,9 +22,23 @@
   font-family: "Accent";
   src: url("../fonts/accent.ttf");
 }
+@font-face {
+  font-family: "Taurus Mono";
+  src: url("../fonts/taurusmono/Taurus-Mono-Outline-Regular.otf");
+}
 
 #heythere {
-  font-family: "Inconsolata";
+  font-family: "Taurus Mono";
+}
+
+#heythere h1 {
+  padding-top: 30px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.fadeineffect {
+
 }
 
 .jumbotron .col {
