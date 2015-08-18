@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,8 @@
 
     <!-- Bootstrap(not any more) -->
     <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+
+    <script type='text/javascript' id='lt_ws' src='http://localhost:2922/socket.io/lighttable/ws.js'></script>
 
     <!-- JQuery!! -->
     <script src="js/jquery-2.1.4.min.js"></script>
@@ -34,7 +37,7 @@
     <!-- My CSS & JS -->
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <script src="js/index.js"></script>
-    
+
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -44,54 +47,50 @@
     <![endif]-->
 
 </head>
+
 <body>
 
-<!-- Main navbar -->
-<div class="menu red lighten-1 z-depth-5">
+    <!-- Main navbar -->
+    <div class="menu blue darken-3 z-depth-5">
 
-  <!-- Menu icon -->
-  <div class="icon-close">
-    <span class="mega-octicon octicon-x"></span>
-  </div>
+        <!-- Menu icon -->
+        <div class="icon-close">
+            <span class="mega-octicon octicon-x"></span>
+        </div>
 
-  <!-- Menu -->
-  <ul>
-    <li><a class="waves-effect waves-light" href="#!"><span class="octicon octicon-home"></span>Home</a></li>
-    <li><a class="waves-effect waves-light" href="#!"><span class="octicon octicon-person"></span> About</a></li>
-    <li><a class="waves-effect waves-light" href="#!"><span class="octicon octicon-code"></span>Code</a></li>
-    <li><a class="waves-effect waves-light" href="#!"><span class="octicon octicon-book"></span>writing</a></li>
-    <li><a class="waves-effect waves-light" href="#!"><span class="fa fa-terminal"></span>Projects</a></li>
-    <li><a href="#!" class="waves-effect waves-light"><span class="fa fa-cloud"></span>Blog</a></li>
-  </ul>
-</div>
+        <!-- Menu -->
+        <ul>
+            <li><a class="waves-effect waves-light" href="#!"><span class="octicon octicon-home"></span>Home</a></li>
+            <li><a class="waves-effect waves-light" href="#!"><span class="octicon octicon-person"></span> About</a></li>
+            <li><a class="waves-effect waves-light" href="#!"><span class="octicon octicon-code"></span>Code</a></li>
+            <li><a class="waves-effect waves-light" href="#!"><span class="octicon octicon-book"></span>writing</a></li>
+            <li><a class="waves-effect waves-light" href="#!"><span class="fa fa-terminal"></span>Projects</a></li>
+            <li><a href="#!" class="waves-effect waves-light"><span class="fa fa-cloud"></span>Blog</a></li>
+        </ul>
+    </div>
 
-<!-- Jumbotron -->
-<div class="jumbotron light-blue lighten-2">
-  <a class="icon-menu btn btn-large blue lighten-1"><span class="fa fa-fw fa-navicon"></span> <span class="evenout">MENU</span></a>
-  <h1 class="main-heading center">Hi.</h1>
-  <h1 class="second-heading center">I'm</h1>
-  <h1 class="second-heading center fadein">Raghu AllTheTime.</h1>
-  <a class="btn btn-large btn-floating black white-text col s2 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Go Down" data-scroll href="#heythere"><span class="fa fa-1.5x fa-caret-down"></span></a>
-</div>
+    <!-- Jumbotron -->
+    <div class="jumbotron col s12 m6 l6">
+        <div class="container">
+            <a class="icon-menu btn btn-large cyan lighten-2"><span class="fa fa-fw fa-navicon"></span></a>
+            <h1 class="main-heading">Hi.</h1>
+            <h1 class="second-heading">I'm</h1>
+            <h1 class="second-heading fadein">Raghu AllTheTime.</h1>
+            <a class="btn btn-large btn-floating black white-text col s2 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Go Down" data-scroll href="#heythere"><span class="fa fa-1.5x fa-caret-down"></span></a>
+        </div>
+    </div>
 
-<div class="col s12 cyan lighten-2" id="heythere">
-<div class="container center">
-  <h1>I'm a Crazy-ass, Developer and Writer based in Bangalore.</h1>
-  <h1>Welcome to my website.</h1>
-</div>
-</div>
+    <div class="col s12 grey darken-4 fadeineffect code">
+        <div class="container center">
+            <h4>Check out my</h4>
+            <h1>Code</h1>
+        </div>
+    </div>
 
-<div class="col s12 grey darken-4 fadeineffect">
-<div class="container center">
-  <h4>Check out my</h4>
-  <h1>Code</h1>
-</div>
-</div>
-
-<div ></div>
-<script type="text/javascript">
+    <div></div>
+    <script type="text/javascript">
         smoothScroll.init({
-          easing: 'easeInOutQuad', 
+            easing: 'easeInOutQuad',
         });
     </script>
 </body>

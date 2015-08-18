@@ -1,176 +1,166 @@
 @font-face {
-  font-family: "Arkhip";
-  src: url("../fonts/Arkhip_font/Arkhip_font.ttf");
+    font-family: "Arkhip";
+    src: url("../fonts/Arkhip_font/Arkhip_font.ttf");
 }
 
 @font-face {
-  font-family: "Bariol";
-  src: url("../fonts/Bariol_Regular/Bariol_Regular.otf");
+    font-family: "Bariol";
+    src: url("../fonts/Bariol_Regular/Bariol_Regular.otf");
 }
 
 @font-face {
-  font-family: "Hero";
-  src: url("../fonts/Hero/Hero.otf");
+    font-family: "Hero";
+    src: url("../fonts/Hero/Hero.otf");
 }
 
 @font-face {
-  font-family: "Hero Light";
-  src: url("../fonts/Hero/Hero Light.otf");
+    font-family: "Hero Light";
+    src: url("../fonts/Hero/Hero Light.otf");
 }
 
 @font-face {
-  font-family: "Accent";
-  src: url("../fonts/accent.ttf");
+    font-family: "Accent";
+    src: url("../fonts/accent.ttf");
 }
+
 @font-face {
-  font-family: "Taurus Mono";
-  src: url("../fonts/taurusmono/Taurus-Mono-Outline-Regular.otf");
+    font-family: "Taurus Mono";
+    src: url("../fonts/taurusmono/Taurus-Mono-Outline-Regular.otf");
 }
 
 #heythere {
-  font-family: "Taurus Mono";
+    font-family: "Taurus Mono";
 }
 
 #heythere h1 {
-  padding-top: 30px;
-  margin-top: 0px;
-  margin-bottom: 0px;
+    padding-top: 30px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
-.fadeineffect {
-
-}
+.fadeineffect {}
 
 .jumbotron .col {
-  margin-left: 48%;
-  margin-top: 5%;
-  opacity: 0.6;
-  border-radius: 70px;
+    margin-left: 48%;
+    top: 5%;
 }
 
 .main-heading {
-  font-family: "Bariol", sans-serif;
-  font-size: 150px;
-  margin-top: 0px;
-  padding-top: 25px;
+    font-family: "Bariol", sans-serif;
+    font-size: 150px;
+    margin-top: 0px;
+    padding-top: 25px;
 }
 
 .second-heading {
-  font-size: 75px;
-  font-family: "Hero Light", sans-serif;
+    font-size: 75px;
+    font-family: "Hero Light", sans-serif;
 }
 
 .side-nav .fa-phone {
-  font-size: 32px;
-  padding-right: 10px;
+    font-size: 32px;
+    padding-right: 10px;
 }
 
 .jumbotron {
-  height: 100%;
-  align-content: center;
+    height: 100%;
+    background-image: url(../img/main-wallpaper.png)
 }
 
-.jumbotron .btn {
-  align-self: center;
+body,
+html {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    margin: 0;
+    overflow-x: hidden;
+    position: relative;
 }
 
-body,html {
-  width: 100%;
-  height: 100%;
-  left: 0;
-  margin: 0;
-  overflow-x: hidden;
-  position: relative;
-}
 
 /* Initial menu */
+
 .menu {
-  left: -285px;  /* start off behind the scenes */
-  height: 100%;
-  position: fixed;
-  width: 285px;
+    left: -285px;
+    /* start off behind the scenes */
+    height: 100%;
+    position: fixed;
+    width: 285px;
 }
+
 
 /* Basic styling */
 
-.jumbotron {
-  height: 100%;
+.code h1{
+	margin-top: 0px;
+} 
+
+.code h4 {
+	margin-top: 0px;
 }
 
 .menu ul {
-  border-top: 1px solid #bdbdbd;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+    border-top: 1px solid #0d47a1;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .menu li {
-  border-bottom: 1px solid #bdbdbd;
-  font-family: 'Open Sans', sans-serif;
-  line-height: 55px;
-
+    border-bottom: 1px solid #0d47a1;
+    font-family: 'Lato', sans-serif;
+    line-height: 55px;
 }
 
 .menu a {
-  color: #fff;
-  font-size: 15px;
-  padding-left: 20px;
-  text-decoration: none;
-  text-transform: uppercase;
+    color: #fff;
+    font-size: 15px;
+    padding-left: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
 .icon-close {
-  cursor: pointer;
-  padding-left: 20px;
-  font-size: 32px;
+    cursor: pointer;
+    padding-left: 20px;
+    font-size: 32px;
 }
 
 .icon-close .mega-octicon {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  color: #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
 }
-
-
 
 .icon-menu {
-  color: #fff;
-  cursor: pointer;
-  font-size: 20px;
-  padding-bottom: 25px;
-  padding-left: 25px;
-  margin-top: 20px;
-  margin-left: 20px;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-.evenout {
-  font-size: 17px;
-  font-family: "Lato", sans-serif;
-  vertical-align: middle;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top: 5%;
+    padding-bottom: 25px;
 }
 
 .menu li {
-  box-sizing: inherit;
-  padding-top: 0px;
-  padding-bottom: 0px;
+    box-sizing: inherit;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
 .menu li a {
-  box-sizing: padding-box;
-  display: block;
-  font-family: 'Lato', sans-serif;
-  text-decoration: none;
-  outline: 0;
-  border:1px solid rgba(255, 255, 255, 0);
+    box-sizing: padding-box;
+    display: block;
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+    outline: 0;
+    border: 1px solid rgba(255, 255, 255, 0);
 }
 
 .menu li a:focus {
-  text-decoration: none;
+    text-decoration: none;
 }
 
-.menu li a .octicon, .menu li a .fa {
-  padding-right: 10px;
-  font-size: 25px;
+.menu li a .octicon,
+.menu li a .fa {
+    padding-right: 10px;
+    font-size: 25px;
 }
