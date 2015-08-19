@@ -23,23 +23,6 @@
     src: url("../fonts/accent.ttf");
 }
 
-@font-face {
-    font-family: "Taurus Mono";
-    src: url("../fonts/taurusmono/Taurus-Mono-Outline-Regular.otf");
-}
-
-#heythere {
-    font-family: "Taurus Mono";
-}
-
-#heythere h1 {
-    padding-top: 30px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
-
-.fadeineffect {}
-
 .jumbotron .col {
     margin-left: 48%;
     top: 5%;
@@ -64,7 +47,8 @@
 
 .jumbotron {
     height: 100%;
-    background-image: url(../img/main-wallpaper.png)
+    background-image: url(../img/main-wallpaper.png);
+    background-size: cover;
 }
 
 body,
@@ -91,13 +75,26 @@ html {
 
 /* Basic styling */
 
+.code {
+	height: 100%;
+}
+
 .code h1{
-	margin-top: 0px;
+	margin-top: 0px; 
+    font-family: "Inconsolata";
+    font-size: 150px;
 } 
 
 .code h4 {
+    font-family: "Lato", sans-serif;
+    -webkit-transition: all 1s cubic-bezier(0,.64,.58,.99);
+    transition: all 1s cubic-bezier(0,.64,.58,.99);
 	margin-top: 0px;
+    padding-top: 30%;
+    font-size: 75px;
+    color: black;
 }
+
 
 .menu ul {
     border-top: 1px solid #0d47a1;
