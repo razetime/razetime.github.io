@@ -1,9 +1,4 @@
 @font-face {
-    font-family: "Arkhip";
-    src: url("../fonts/Arkhip_font/Arkhip_font.ttf");
-}
-
-@font-face {
     font-family: "Bariol";
     src: url("../fonts/Bariol_Regular/Bariol_Regular.otf");
 }
@@ -21,6 +16,11 @@
 @font-face {
     font-family: "Accent";
     src: url("../fonts/accent.ttf");
+}
+
+.divlink {
+    display: block;
+    color: black;
 }
 
 .jumbotron .col {
@@ -47,8 +47,8 @@
 
 .jumbotron {
     height: 100%;
-    background-image: url(../img/main-wallpaper.png);
-    background-size: cover;
+    background-image: url(../img/code-wallpaper.png);
+
 }
 
 body,
@@ -70,6 +70,8 @@ html {
     height: 100%;
     position: fixed;
     width: 285px;
+    background-color: #191919;
+    border: #000;
 }
 
 
@@ -77,21 +79,25 @@ html {
 
 .code {
 	height: 100%;
+    background-color: #111;
 }
 
-.code h1{
-	margin-top: 0px; 
+.code-h1{
     font-family: "Inconsolata";
-    font-size: 150px;
+    font-size: 120px;
+    color: #00E100;
 } 
 
-.code h4 {
+.code-h4 {
     font-family: "Lato", sans-serif;
-    -webkit-transition: all 1s cubic-bezier(0,.64,.58,.99);
-    transition: all 1s cubic-bezier(0,.64,.58,.99);
-	margin-top: 0px;
     padding-top: 30%;
-    font-size: 75px;
+    margin-top: 0px;
+
+}
+
+.code a {
+	font-family: "Hero", sans-serif;
+    font-size: 25px;
     color: black;
 }
 
@@ -160,4 +166,49 @@ html {
 .menu li a .fa {
     padding-right: 10px;
     font-size: 25px;
+}
+
+
+.pointer {
+    -webkit-transition: all .2s cubic-bezier(.5,.34,.49,.6);
+            transition: all .2s cubic-bezier(.5,.34,.49,.6);
+}
+
+.pointer:hover {
+    padding-left: 20px;
+}
+
+.cbg {
+    padding-top: 10%;
+    height:80%;
+    width: 80%;
+}
+
+@-webkit-keyframes blink {
+    from { opacity: 1; }
+    50% { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes blink {
+    from { opacity: 1; }
+    50% { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.blinker {
+    color: #00E100;
+    -webkit-animation: blink 1s infinite;
+            animation: blink 1s infinite;
+}
+.write {
+    height: 100%;
+}
+
+.code .octicon {
+    padding-top: 30%;
+}
+
+.octicon {
+    
 }

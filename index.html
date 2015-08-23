@@ -8,24 +8,13 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Raghu AllTheTime</title>
 
-    <!-- Bootstrap(not any more) -->
-    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
-
-    <script type='text/javascript' id='lt_ws' src='http://localhost:2922/socket.io/lighttable/ws.js'></script>
-
     <!-- JQuery!! -->
     <script src="js/jquery-2.1.4.min.js"></script>
 
     <!-- Materialize - so beautiful that you'd fall in love with it. -->
     <!-- materializecss.com -->
     <link rel="stylesheet" type="text/css" href="css/materialize.css">
-    <script src="js/materialize.min.js"></script>
-
-    <!-- Buoy, for Smooth Scroll -->
-    <script src="js/buoy.min.js"></script>
-
-    <!-- Smooth Scroll -->
-    <script src="js/smooth-scroll.min.js"></script>
+    <script src="js/materialize.min.js" type="text/javascript"></script>
 
     <!-- A couple o' fonts -->
     <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
@@ -40,19 +29,12 @@
     <script src="js/index.js"></script>
 
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
 </head>
 
 <body>
 
     <!-- Main navbar -->
-    <div class="menu blue darken-3 z-depth-5">
+    <div class="menu z-depth-5">
 
         <!-- Menu icon -->
         <div class="icon-close">
@@ -61,39 +43,54 @@
 
         <!-- Menu -->
         <ul>
-            <li><a class="waves-effect waves-teal" href="#!"><span class="octicon octicon-home"></span>Home</a></li>
-            <li><a class="waves-effect waves-teal" href="#!"><span class="octicon octicon-person"></span> About</a></li>
-            <li><a class="waves-effect waves-teal" href="#!"><span class="octicon octicon-code"></span>Code</a></li>
-            <li><a class="waves-effect waves-teal" href="#!"><span class="octicon octicon-book"></span>writing</a></li>
-            <li><a class="waves-effect waves-teal" href="#!"><span class="fa fa-terminal"></span>Projects</a></li>
-            <li><a href="#!" class="waves-effect waves-teal"><span class="fa fa-cloud"></span>Blog</a></li>
+            <li><a class="waves-effect waves-teal" href="#!"><span class="octicon  octicon-home"></span>Home</a></li>
+            <li><a class="waves-effect waves-teal" href="#!"><span class="octicon fa-fw octicon-person"></span> About</a></li>
+            <li><a class="waves-effect waves-teal" href="#!"><span class="octicon fa-fw octicon-code"></span>Code</a></li>
+            <li><a class="waves-effect waves-teal" href="#!"><span class="octicon fa-fw octicon-book"></span>writing</a></li>
+            <li><a class="waves-effect waves-teal" href="#!"><span class="fa fa-fw fa-terminal"></span>Projects</a></li>
+            <li><a href="#!" class="waves-effect waves-teal"><span class="fa fa-fw fa-cloud"></span>Blog</a></li>
         </ul>
     </div>
 
     <!-- Jumbotron -->
-    <div class="jumbotron col s12 m6 l6">
-        <div class="container">
+    <div class="jumbotron">
+        <div class="container grey-text text-darken-4">
             <a class="icon-menu btn btn-large transparent waves-effect waves-light"><span class="fa fa-fw fa-navicon"></span></a>
-            <h1 class="main-heading">Hi.</h1>
+            <h1 class="main-heading" data-sr>Hi.</h1>
             <h1 class="second-heading">I'm</h1>
-            <h1 class="second-heading fadein">Raghu AllTheTime.</h1>
-            <h1><span class="fa fa-down"></span></h1>
+            <h1 class="second-heading">Raghu AllTheTime.</h1>
+            <a class="btn btn-floating transparent"><span class="fa fa-arrow-down"></span></a>
         </div>
     </div>
 
-    <div class="col s12 grey darken-4 code">
-        <div class="container">
-            <h4>Check out my</h4>
-            <h1>Code</h1>
+    <!-- Ma Code -->
+    <div class="code hoverable">
+        <div class="row">
+            <div class="col s12 l6">
+                <div class="container">
+                    <h3 class="code-h4">Check out my</h3>
+                    <h1 class="code-h1">Code. <span class="blinker">_</span></h1>
+                    <a class="btn btn-large btn-flat blue-grey darken-4" href="#!">Over Here <span class="fa fa-chevron-right pointer"></span></a>
+                </div>
+            </div>
+            <div class="col s12 l5 hide-on-small">
+                <div class="container valign-wrapper">
+                    <h1><span class="blue-grey-text text-lighten-1 octicon octicon-code fa-5x"></span> </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="write blue-grey lighten-2 hoverable">
+        <div class="row">
+            <div class="col s12 l6 hide-on-small"></div>
+            <div class="col s12 l6">
+                <h1>Read</h1>
+                <h3>What I've written</h3>
+                <a href="">Over Here span</a>
+            </div>
         </div>
     </div>
 
-    <div></div>
-    <script type="text/javascript">
-        smoothScroll.init({
-            easing: 'easeInOutQuad',
-        });
-    </script>
 </body>
 
 
