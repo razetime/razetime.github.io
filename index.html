@@ -29,6 +29,7 @@
     <script src="js/index.js"></script>
 
 
+
 </head>
 
 <body>
@@ -57,40 +58,51 @@
         <div class="container grey-text text-darken-4">
             <a class="icon-menu btn btn-large transparent waves-effect waves-light"><span class="fa fa-fw fa-navicon"></span></a>
             <h1 class="main-heading" data-sr>Hi.</h1>
-            <h1 class="second-heading">I'm</h1>
-            <h1 class="second-heading">Raghu AllTheTime.</h1>
-            <a class="btn btn-floating transparent"><span class="fa fa-arrow-down"></span></a>
+            <h1 class="second-heading" data-sr>I'm</h1>
+            <h1 class="second-heading" data-sr>Raghu AllTheTime.</h1>
+            <a class="btn btn-floating transparent" href="#code"><span class="fa fa-arrow-down"></span></a>
         </div>
     </div>
 
     <!-- Ma Code -->
-    <div class="code hoverable">
+    <div class="code hoverable" id="code">
         <div class="row">
             <div class="col s12 l6">
                 <div class="container">
-                    <h3 class="code-h4">Check out my</h3>
-                    <h1 class="code-h1">Code. <span class="blinker">_</span></h1>
+                    <h3 class="code-h4 green-text text-darken-3">Check out my</h3>
+                    <h1 class="code-h1">Code. </h1>
                     <a class="btn btn-large btn-flat blue-grey darken-4 waves-effect waves-light" href="#!">Over Here <span class="fa fa-chevron-right pointer"></span></a>
                 </div>
             </div>
-            <div class="col s12 l5 hide-on-med hide-on-small">
-                <div class="container valign-wrapper">
-                    <h1><span class="blue-grey-text text-lighten-1 octicon octicon-code fa-5x"></span> </h1>
+            <div class="col s12 l5 hide-on-med-and-down">
+                <div class="container">
+                    <h1 class="green-text text-darken-3 valign"><span class="fa fa-chevron-right fa-5x"></span><span class="blinker fa-3x">__</span></h1>
                 </div>
             </div>
         </div>
     </div>
     <div class="write blue-grey lighten-2 hoverable">
         <div class="row">
-            <div class="col s12 l6 hide-on-small"></div>
+            <div class="col s12 l5 offset hide-on-med-and-down">
+                <div class="container">
+                    <span class="oction oction-book fa-5x"></span>
+                </div>
+            </div>
             <div class="col s12 l6">
-                <h1>Read</h1>
-                <h3>What I've written</h3>
-                <a class="btn btn-large grey darken-1 waves-effect waves-light" href="#!">Over Here <span class="fa fa-chevron-right"></span> </a>
+                <div class="container">
+                    <h1 class="right-align">Read</h1>
+                    <h3 class="right-align">What I've written</h3>
+                    <div class="right-align"><a class="btn btn-large grey darken-1 waves-effect waves-light" href="#!">Over Here <span class="fa fa-chevron-right"></span> </a></div>
+                </div>
             </div>
         </div>
     </div>
 
+    <!-- ScrollReveal -->
+    <script src="js/scrollReveal.min.js"></script>
+    <script>
+        window.sr = new scrollReveal();
+    </script>
 </body>
 
 
