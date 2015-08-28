@@ -14,8 +14,8 @@
 }
 
 @font-face {
-    font-family: "Accent";
-    src: url("../fonts/accent.ttf");
+    font-family: "Josefin Slab";
+    src: url("../fonts/JosefinSlab-Regular.ttf");
 }
 
 body,
@@ -170,12 +170,12 @@ html {
 }
 
 .code .l5 h1 {
-    padding-top: 30%;
+    padding-top: 50%;
 }
 
 .code-h4 {
     font-family: "Hero", sans-serif;
-    padding-top: 30%;
+    padding-top: 50%;
 
 }
 
@@ -202,5 +202,23 @@ html {
     height: 100%;
 }
 
+.write .l6 h1 {
+    padding-top: 50%;
+    font-size: 7.5em;
+    font-family: "Josefin Slab";
+}
 
+.write h3{
+	font-family: "Hero", sans-serif;
+    
+}
 
+.write a {
+    font-family: "Hero", sans-serif;
+	font-size: 1.563em;
+}
+
+.write h1 span {
+    font-size: 6em;
+	padding-top: 50%;
+}
