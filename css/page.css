@@ -1,0 +1,99 @@
+@font-face {
+    font-family: "Accent";
+    src: url("../fonts/accent.ttf");
+}
+
+
+/* menu stuff */
+
+body,
+html {
+    height: 100%;
+    position: relative;
+}
+
+.menu {
+    left: -285px;
+    /* start off behind the scenes */
+    height: 100%;
+    position: fixed;
+    width: 285px;
+    background-color: #191919;
+    border: #000;
+}
+
+.menu ul {
+    border-top: 1px solid #0d47a1;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    border-bottom: 1px solid #0d47a1;
+    font-family: 'Lato', sans-serif;
+    line-height: 55px;
+}
+
+.menu a {
+    color: #fff;
+    font-size: 0.938em;
+    padding-left: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.icon-close {
+    cursor: pointer;
+    padding-left: 20px;
+    font-size: 32px;
+}
+
+.icon-close .mega-octicon {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+}
+
+.icon-menu {
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top: 5%;
+    padding-bottom: 25px;
+}
+
+.menu li {
+    box-sizing: inherit;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.menu li a {
+    box-sizing: padding-box;
+    display: block;
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+    outline: 0;
+    border: 1px solid rgba(255, 255, 255, 0);
+}
+
+.menu li a:focus {
+    text-decoration: none;
+}
+
+.menu li a .octicon,
+.menu li a .fa {
+    padding-right: 10px;
+    font-size: 25px;
+}
+
+.title {
+    height: 100%;
+}
+
+.title h1 {
+    padding-top: 28%;
+    font-family: "Accent", sans-serif;
+    font-size: 10em;
+}
