@@ -39,6 +39,10 @@ html {
     top: 5%;
 }
 
+.jumbotron h1 {
+	 padding-left: 100%;
+}
+
 .main-heading {
     font-family: "Bariol", sans-serif;
     font-size: 9.375em;

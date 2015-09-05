@@ -1,6 +1,9 @@
 var main = function () {
     $('.jumbotron .container').hide();
-    $('.jumbotron .container').fadeIn(5000);
+	$('.jumbotron h1').animate({
+		paddingLeft: "0px"
+	},1000)
+    $('.jumbotron .container').fadeIn(1000);
     
     /* Push the body and the nav over by 285px over */
     $('.icon-menu').click(function () {
@@ -27,7 +30,7 @@ var main = function () {
             left: "0px"
         }, 200);
     });
-    
+    $('.jumbotron a.btn-floating').smoothScroll();
 
 };
 
