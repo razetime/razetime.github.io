@@ -30,8 +30,6 @@ var main = function () {
             left: "0px"
         }, 200);
     });
-    $('.jumbotron a.btn-floating').smoothScroll();
-
 };
 
 
