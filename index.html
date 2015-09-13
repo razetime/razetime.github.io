@@ -26,8 +26,6 @@
 		ga('send', 'pageview');
 	</script>
 
-
-
 	<!-- JQuery!! -->
 	<script src="js/jquery-2.1.4.min.js"></script>
 
@@ -48,18 +46,15 @@
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 	<script src="js/index.js"></script>
 
+
 	<script src="js/smoothscroll.js"></script>
+	<script src="js/loader.js"></script>
 
 	<!-- CodeMirror, for, well, code. -->
-	<link rel="stylesheet" href="lib/codemirror.css">
-	<script src="lib/codemirror.js"></script>
-	<script src="mode/htmlembedded/htmlembedded.js"></script>
-	<link rel="stylesheet" href="theme/material.css">
-	<script>
-		var editor = CodeMirror(document.getElementById("code-editor"),{
-
-		})
-	</script>
+	<script src="codemirror-5.6/lib/codemirror.js"></script>
+	<link rel="stylesheet" href="codemirror-5.6/lib/codemirror.css">
+	<script src="codemirror-5.6/mode/xml/xml.js"></script>
+	<link rel="stylesheet" href="codemirror-5.6/theme/material.css">
 </head>
 
 <body>
@@ -74,9 +69,9 @@
 
 		<!-- Menu -->
 		<ul>
-			<li><a class="waves-effect waves-brown" href="index.html"><span class="octicon  octicon-home"></span>Home</a></li>
+			<li class="active"><a class="waves-effect waves-brown" href="index.html"><span class="octicon  octicon-home"></span>Home </a></li>
 			<li><a class="waves-effect waves-brown" href="about.html"><span class="octicon fa-fw octicon-person"></span> About</a></li>
-			<li><a class="waves-effect waves-brown" href="#code.html"><span class="octicon fa-fw octicon-code"></span>Code</a></li>
+			<li><a class="waves-effect waves-brown" href="code.html"><span class="octicon fa-fw octicon-code"></span>Code</a></li>
 			<li><a class="waves-effect waves-brown" href="#writing.html"><span class="octicon fa-fw octicon-book"></span>writing</a></li>
 			<li><a href="#!" class="waves-effect waves-brown"><span class="fa fa-fw fa-cloud"></span>Blog</a></li>
 		</ul>
@@ -107,56 +102,70 @@
 	</div>
 
 	<!-- Ma Code -->
-	<div class="code">
+	<div class="code blue-grey darken-4">
 		<div class="row">
-			<div class="col s12 l6" id="code">
+			<div class="col s6" id="code">
 				<div class="container">
 					<h3 class="code-h4 green-text text-darken-3">Check out my</h3>
 					<h1 class="code-h1">Code. </h1>
-					<a class="btn btn-large btn-flat blue-grey darken-4 waves-effect waves-light" href="#!">Over Here <span class="fa fa-chevron-right pointer"></span></a>
+					<a class="btn btn-large btn-flat blue-grey darken-3 waves-effect waves-light" href="#!">Gimme Some! <span class="fa fa-chevron-right pointer"></span></a>
 				</div>
 			</div>
-			<div class="col s12 l5 hide-on-small">
-				<div class="container">
-					<textarea name="editor" id="code-editor">
-						bruh how's life?
-					</textarea>
+			<div class="col s5 hide-on-small-only">
+				<div class="container green-text">
+					<div class="editor-container">
+						<!--
+						<form action="edit" class="valign">
+						<textarea name="codedit" id="code-editor">
+<html>
+	<head>
+		<title>Raghu's Website</title>
+	</head>
+	<body>
+		<h1>Check my code out here:</h1>
+		<a href="code.html"></a>
+	</body>
+</html>
+						</textarea>
+					</form>
+-->
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
 	<!-- Writing that I've done -->
-	<div class="write blue-grey lighten-2">
+	<div class="write blue lighten-1">
 		<div class="row">
-			<div class="col s12 l5 offset-l1 hide-on-small">
+			<div class="col s5 offset-l1 hide-on-small-only">
 				<div class="container">
 					<h1>
                         <span class="shadowed octicon octicon-book fa-5x"></span>
                     </h1>
 				</div>
 			</div>
-			<div class="col s12 l6">
-				<div class="container">
+			<div class="col s6">
+				<div class="container grey-text text-darken-4">
 					<h1>Read</h1>
 					<h3>What I've written</h3>
-					<div><a class="btn btn-large grey darken-1 waves-effect waves-light" href="#!">Over Here <span class="pointer fa fa-chevron-right"></span> </a></div>
+					<div><a class="btn btn-large btn-flat blue darken-1 waves-effect waves-light" href="#!">Over Here <span class="pointer fa fa-chevron-right"></span> </a></div>
 				</div>
 			</div>
 		</div>
 	</div>
 
 	<!-- Contact Meh -->
-	<div class="contact light-green">
+	<div class="contact blue-grey">
 		<div class="row">
-			<div class="col s12 l6">
+			<div class="col s6">
 				<div class="container">
 					<h1>Contact Me</h1>
 					<h3>I mean, why not?</h3>
-					<a href="#!" class="btn btn-large waves-effect waves-light">Over Here <span class="fa fa-chevron-right pointer"></span></a>
+					<a href="#!" class="btn btn-large btn-flat blue-grey darken-1 waves-effect waves-light">Over Here <span class="fa fa-chevron-right pointer"></span></a>
 				</div>
 			</div>
-			<div class="col s12 l5 hide-on-small">
+			<div class="col s5 hide-on-small-only">
 				<div class="container">
 					<h1>
                         <span class="fa fa-phone fa-3x"></span>
@@ -167,12 +176,16 @@
 	</div>
 
 	<!-- Blog -->
-	<div class="blog blue-grey darken-3">
-		<div class="container">
-			<h1>Get notified of my latest posts!</h1>
-			<div class="center"><a href="" class="btn btn-large waves-effect waves-light blue-grey darken-2">Check out my Blog <span class="fa fa-chevron-right pointer"></span> </a></div>
-			<h3 class="center">OR</h3>
-			<div class="center"><a href="" class="btn btn-large waves-effect waves-light blue-grey darken-1">Subscribe <span class="fa fa-chevron-right pointer"></span></a>
+	<div class="blog blue lighten-2">
+		<div class="row">
+			<div class="col s12">
+				<div class="container">
+					<h1>Get notified of my latest posts!</h1>
+					<div class="center"><a href="" class="btn btn-large waves-effect waves-light blue-grey darken-2">Check out my Blog <span class="fa fa-chevron-right pointer"></span> </a></div>
+					<h3 class="center">OR</h3>
+					<div class="center"><a href="" class="btn btn-large waves-effect waves-light blue-grey darken-1">Subscribe <span class="fa fa-chevron-right pointer"></span></a>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -180,7 +193,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col l6 s12">
-					<h5 class="white-text">Raghu AllTheTime</h5>
+					<h5 class="white-text">Raghu Ranganathan(razetime)</h5>
 					<p class="grey-text text-lighten-4">Developer, Designer, Writer, Musician.</p>
 					<p class="grey-text text-lighten-4">Developer @ Quad Cubed Studios.</p>
 					<p class="grey-text text-lighten-4">Love Coding, and helping people.</p>
@@ -207,6 +220,13 @@
 			</div>
 		</div>
 	</footer>
+	<script>
+		var myCodeMirror = CodeMirror.fromTextArea(document.getElementById("code-editor"), {
+			lineNumbers: true,
+			mode: "xml"
+		});
+		myCodeMirror.setOption("theme", "material");
+	</script>
 </body>
 
 
