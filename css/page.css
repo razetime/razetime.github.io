@@ -127,11 +127,13 @@ html {
 .title h1 {
 	font-family: "Accent", sans-serif;
 	font-size: 10em;
+	padding-top: 20%
 }
 
 @media screen and (max-width:600px) {
 	.title h1 {
-		font-size: 7em;
+		font-size: 5em;
+		padding-top: 30%;
 	}
 }
 
