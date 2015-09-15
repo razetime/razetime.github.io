@@ -1,16 +1,16 @@
 @font-face {
-    font-family: "Accent";
-    src: url("../fonts/accent.ttf");
+	font-family: "Accent";
+	src: url("../fonts/accent.ttf");
 }
 
 @font-face {
-    font-family: "Hero";
-    src: url("../fonts/Hero/Hero.otf");
+	font-family: "Hero";
+	src: url("../fonts/Hero/Hero.otf");
 }
 
 @font-face {
-    font-family: "Hero Light";
-    src: url("../fonts/Hero/Hero Light.otf");
+	font-family: "Hero Light";
+	src: url("../fonts/Hero/Hero Light.otf");
 }
 
 
@@ -18,146 +18,152 @@
 
 body,
 html {
-    height: 100%;
-    position: relative;
+	height: 100%;
+	position: relative;
 }
 
 .menu {
-    left: -285px;
-    /* start off behind the scenes */
-    height: 100%;
-    position: fixed;
-    width: 285px;
-    background-color: #191919;
-    border: #000;
+	left: -285px;
+	/* start off behind the scenes */
+	height: 100%;
+	position: fixed;
+	width: 285px;
+	background-color: #191919;
+	border: #000;
 }
 
 .menu ul {
-    border-top: 1px solid #0d47a1;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+	border-top: 1px solid #0d47a1;
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 .menu li {
-    border-bottom: 1px solid #0d47a1;
-    font-family: 'Lato', sans-serif;
-    line-height: 55px;
+	border-bottom: 1px solid #0d47a1;
+	font-family: 'Lato', sans-serif;
+	line-height: 55px;
 }
 
 .menu a {
-    color: #fff;
-    font-size: 0.938em;
-    padding-left: 20px;
-    text-decoration: none;
-    text-transform: uppercase;
+	color: #fff;
+	font-size: 0.938em;
+	padding-left: 20px;
+	text-decoration: none;
+	text-transform: uppercase;
 }
 
 .icon-close {
-    cursor: pointer;
-    padding-left: 20px;
-    font-size: 32px;
+	cursor: pointer;
+	padding-left: 20px;
+	font-size: 32px;
 }
 
 .icon-close .mega-octicon {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    color: #fff;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: #fff;
 }
 
 .icon-menu {
-    color: #fff;
-    cursor: pointer;
-    font-size: 20px;
-    margin-top: 5%;
-    padding-bottom: 25px;
+	color: #fff;
+	cursor: pointer;
+	font-size: 20px;
+	margin-top: 5%;
+	padding-bottom: 25px;
 }
 
 .menu li {
-    box-sizing: inherit;
-    padding-top: 0px;
-    padding-bottom: 0px;
+	box-sizing: inherit;
+	padding-top: 0px;
+	padding-bottom: 0px;
 }
 
 .menu li a {
-    box-sizing: padding-box;
-    display: block;
-    font-family: 'Lato', sans-serif;
-    text-decoration: none;
-    outline: 0;
-    border: 1px solid rgba(255, 255, 255, 0);
+	box-sizing: padding-box;
+	display: block;
+	font-family: 'Lato', sans-serif;
+	text-decoration: none;
+	outline: 0;
+	border: 1px solid rgba(255, 255, 255, 0);
 }
 
 .menu li a:focus {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 .menu li a .octicon,
 .menu li a .fa {
-    padding-right: 10px;
-    font-size: 25px;
+	padding-right: 10px;
+	font-size: 25px;
 }
 
 
 /* TITLE!*/
 
 @-webkit-keyframes fadein {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
 
 @keyframes fadein {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
 
 .title {
-    height: 100%;
-    background-color: #004d40;
+	height: 100%;
+	background-color: #004d40;
 }
 
 .title h1 {
-    padding-top: 23%;
-    font-family: "Accent", sans-serif;
-    font-size: 10em;
+	font-family: "Accent", sans-serif;
+	font-size: 10em;
+}
+
+@media screen and (max-width:600px) {
+	.title h1 {
+		font-size: 7em;
+	}
 }
 
 .title h1 span {
-    -webkit-animation: fadein .5s;
-    animation: fadein .5s;
-    -webkit-animation: fadein .5s;
-            animation: fadein .5s;
+	-webkit-animation: fadein .5s;
+	animation: fadein .5s;
+	-webkit-animation: fadein .5s;
+	animation: fadein .5s;
 }
 
 .title .fa-arrow-down {
-    text-shadow: 0px 0px #fff;
-    -webkit-transition: all .2s cubic-bezier(.5, .34, .49, .6);
-    transition: all .2s cubic-bezier(.5, .34, .49, .6);
+	text-shadow: 0px 0px #fff;
+	-webkit-transition: all .2s cubic-bezier(.5, .34, .49, .6);
+	transition: all .2s cubic-bezier(.5, .34, .49, .6);
 }
 
 .title .fa-arrow-down:hover {
-    text-shadow: 0px 20px #111;
+	text-shadow: 0px 20px #111;
 }
 
-.content, footer {
+.content,
+footer {
 	color: #191919;
-    font-family: "Hero", sans-serif;
+	font-family: "Hero", sans-serif;
 }
 
 p {
-    font-size: 1.5em;
+	font-size: 1.5em;
 }
 
 strong {
-    font-family: "Hero Light", sans-serif;
+	font-family: "Hero Light", sans-serif;
 }
 
 .divider {
@@ -165,5 +171,5 @@ strong {
 }
 
 a {
-    color: #006064;
+	color: #006064;
 }
