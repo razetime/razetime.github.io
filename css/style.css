@@ -1,0 +1,101 @@
+@font-face {
+    font-family: "EverMono";
+    src: url('../font/evermono-7.0.0/Everson Mono.ttf');
+}
+@font-face {
+    font-family: "EverMonoB";
+    src: url('../font/evermono-7.0.0/Everson Mono Bold.ttf');
+}
+@font-face {
+    font-family: "EverMonoO";
+    src: url('../font/evermono-7.0.0/Everson Mono Oblique.ttf');
+}
+@font-face {
+    font-family: "EverMonoBO";
+    src: url('../font/evermono-7.0.0/Everson Mono Bold Oblique.ttf');
+}
+html, body {
+    height: 100%;
+}
+.hero {
+    background: -webkit-linear-gradient(90deg, #FC354C 10%, #0ABFBC 90%);
+    /* Chrome 10+, Saf5.1+ */
+    /* FF3.6+ */
+    /* IE10 */
+    /* Opera 11.10+ */
+    background: -webkit-linear-gradient(0deg, #FC354C 10%, #0ABFBC 90%);
+    background: linear-gradient(90deg, #FC354C 10%, #0ABFBC 90%);
+    /* W3C */
+    height: 100%;
+}
+
+a {
+    color: #CC0000;
+}
+
+h1,h2,h3,h4,h5,h6,p,a {
+    font-family: "EverMono";
+}
+
+header {
+    height: 100%;
+}
+
+.hero h1 {
+    font-family: "EverMonoB";
+}
+
+.hero h3 {
+    font-family: "EverMono";
+}
+
+.side-nav li {
+    -webkit-transition: all .2s cubic-bezier(.17, .67, .83, .67);
+    transition: all .2s cubic-bezier(.17, .67, .83, .67);
+}
+
+
+.logo a {
+    height: auto;
+}
+
+.projects h1 {
+    margin-top: 0;
+    padding-top: 2.1rem;
+    font-weight: bold;
+}
+
+.projects .col.l4{
+    border-left: 2px solid #ff5252;
+}
+
+.projects h3 {
+    color: rgba(0, 0, 0, 0.5);;
+}
+
+.projects .btn-flat {
+    margin-top: 20px;
+}
+
+.write .col.l4 {
+    border-left: 2px solid #1de9b6;
+}
+
+.write h1 {
+    margin-top: 0;
+    padding-top: 2.1rem;
+    font-weight: bold;
+}
+
+.write .btn-flat {
+    margin-top: 20px;;
+}
+
+footer {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+.footer-copyright {
+    margin-top: 0;
+    padding-top: 0;
+}
