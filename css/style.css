@@ -33,7 +33,7 @@ a {
     color: #CC0000;
 }
 
-h1,h2,h3,h4,h5,h6,p,a {
+* {
     font-family: "EverMono";
 }
 
@@ -52,8 +52,8 @@ header {
 .side-nav li {
     -webkit-transition: all .2s cubic-bezier(.17, .67, .83, .67);
     transition: all .2s cubic-bezier(.17, .67, .83, .67);
+    padding: 0;
 }
-
 
 .logo a {
     height: auto;
@@ -65,7 +65,7 @@ header {
     font-weight: bold;
 }
 
-.projects .col.l4{
+.projects .col.l4 {
     border-left: 2px solid #ff5252;
 }
 

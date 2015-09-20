@@ -1,0 +1,64 @@
+html, body {
+    height: 100%;
+}
+
+a {
+    color: #CC0000;
+}
+
+@font-face {
+    font-family: "EverMono";
+    src:url("../font/evermono-7.0.0/Everson Mono.ttf");
+}
+@font-face {
+    font-family: "EverMonoB";
+    src:url("../font/evermono-7.0.0/Everson Mono Oblique.ttf");
+}
+
+* {
+    font-family: "EverMono";
+}
+
+header {
+    background: -webkit-linear-gradient(90deg, #ED4264 10%, #FFEDBC 90%);
+    /* Chrome 10+, Saf5.1+ */
+    background: -moz-linear-gradient(90deg, #ED4264 10%, #FFEDBC 90%);
+    /* FF3.6+ */
+    background: -ms-linear-gradient(90deg, #ED4264 10%, #FFEDBC 90%);
+    /* IE10 */
+    background: -o-linear-gradient(90deg, #ED4264 10%, #FFEDBC 90%);
+    /* Opera 11.10+ */
+    background: linear-gradient(90deg, #ED4264 10%, #FFEDBC 90%);
+    /* W3C */
+}
+
+header a {
+    color: #111;
+}
+
+main h1 {
+    font-family: "EverMonoB";
+}
+
+.divider {
+    background: rgba(3, 0, 0, 0.5);
+}
+
+footer {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+.footer-copyright {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.side-nav li {
+    -webkit-transition: all .2s cubic-bezier(.17, .67, .83, .67);
+    transition: all .2s cubic-bezier(.17, .67, .83, .67);
+    padding: 0;
+}
+
+.card.website {
+    background: #1de9b6;
+}
