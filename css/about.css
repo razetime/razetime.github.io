@@ -32,6 +32,10 @@ header {
     /* W3C */
 }
 
+.btn {
+    margin-top: 20px;
+}
+
 header a {
     color: #111;
 }
