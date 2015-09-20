@@ -66,3 +66,7 @@ footer {
 .card.website {
     background: #1de9b6;
 }
+
+.card {
+    cursor: pointer;
+}
