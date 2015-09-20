@@ -8,11 +8,11 @@ a {
 
 @font-face {
     font-family: "EverMono";
-    src:url("../font/evermono-7.0.0/Everson Mono.ttf");
+    src: url('../font/dosis/Dosis-Regular.otf');
 }
 @font-face {
     font-family: "EverMonoB";
-    src:url("../font/evermono-7.0.0/Everson Mono Oblique.ttf");
+    src: url('../font/dosis/Dosis-Bold.otf');
 }
 
 * {
