@@ -8,11 +8,11 @@ a {
 
 @font-face {
     font-family: "EverMono";
-    src: url('../font/dosis/Dosis-Regular.otf');
+    src: url('../font/NotCourierSans/NotCourierSans.otf');
 }
 @font-face {
     font-family: "EverMonoB";
-    src: url('../font/dosis/Dosis-Bold.otf');
+    src: url('../font/NotCourierSans/NotCourierSans-Bold.otf');
 }
 
 * {
