@@ -1,10 +1,10 @@
 @font-face {
     font-family: "EverMono";
-    src: url('../font/NotCourierSans/NotCourierSans.otf');
+    src: url('../font/Inconsolata.otf');
 }
 @font-face {
     font-family: "EverMonoB";
-    src: url('../font/NotCourierSans/NotCourierSans.otf');
+    src: url('../Inconsolata.otf');
 }
 /*@font-face {
     font-family: "EverMonoO";
@@ -42,7 +42,8 @@ header {
 }
 
 .hero h1 {
-    font-family: "EverMonoB";
+    font-family: "EverMono";
+    font-weight: bold;
 }
 
 .hero h3 {
