@@ -12,7 +12,7 @@ a {
 }
 @font-face {
     font-family: "EverMonoB";
-    src: url('../font/Inconsolata.otf');
+    src: url('../font/Inconsolata-Bold.otf');
 }
 
 * {
