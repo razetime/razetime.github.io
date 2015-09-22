@@ -4,7 +4,7 @@
 }
 @font-face {
     font-family: "EverMonoB";
-    src: url('../Inconsolata-Bold.ttf');
+    src: url('../font/Inconsolata-Bold.ttf');
 }
 /*@font-face {
     font-family: "EverMonoO";
@@ -43,7 +43,6 @@ header {
 
 .hero h1 {
     font-family: "EverMonoB";
-    font-weight: bold;
 }
 
 .hero h3 {
