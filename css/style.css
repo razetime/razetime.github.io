@@ -14,10 +14,16 @@
     font-family: "EverMonoBO";
     src: url('../font/evermono-7.0.0/Everson Mono Bold Oblique.ttf');
 }*/
+
+.side-nav a {
+    font-size: 1.25rem;
+}
+
 html, body {
     height: 100%;
 }
 .hero {
+    background-color: rgb(245, 255, 255);
     height: 100%;
 }
 

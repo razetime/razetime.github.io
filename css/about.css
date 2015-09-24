@@ -6,6 +6,14 @@ a {
     color: #CC0000;
 }
 
+.side-nav a {
+    font-size: 1.25rem;
+}
+
+.side-nav {
+    background-color: #80cbc4;
+}
+
 @font-face {
     font-family: "EverMono";
     src: url('../font/Inconsolata.otf');
@@ -20,16 +28,7 @@ a {
 }
 
 header {
-    background: -webkit-linear-gradient(90deg, #ED4264 10%, #FFEDBC 90%);
-    /* Chrome 10+, Saf5.1+ */
-    background: -moz-linear-gradient(90deg, #ED4264 10%, #FFEDBC 90%);
-    /* FF3.6+ */
-    background: -ms-linear-gradient(90deg, #ED4264 10%, #FFEDBC 90%);
-    /* IE10 */
-    background: -o-linear-gradient(90deg, #ED4264 10%, #FFEDBC 90%);
-    /* Opera 11.10+ */
-    background: linear-gradient(90deg, #ED4264 10%, #FFEDBC 90%);
-    /* W3C */
+    background: #ffcdd2;
 }
 
 .btn {
@@ -64,7 +63,7 @@ footer {
 }
 
 .card.website {
-    background: #1de9b6;
+    background: #baffee;
 }
 
 .card {
