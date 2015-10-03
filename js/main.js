@@ -5,5 +5,11 @@ $(document).ready(function() {
 })
 
 $(window).scroll(function(){
-    $(".fadescroll").css("opacity", 1 - $(window).scrollTop() / 250);
+    $(".fadescroll").css("opacity", 1 - $(window).scrollTop() / 750);
   });
+
+$('#loader').show();
+
+$(window).on('load', function() {
+    $('#loader').hide();
+})

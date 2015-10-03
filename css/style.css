@@ -23,7 +23,7 @@ html, body {
     height: 100%;
 }
 .hero {
-    background-color: rgb(245, 255, 255);
+    background: url(../img/download.png);
     height: 100%;
 }
 
