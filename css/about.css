@@ -15,16 +15,16 @@ a {
 }
 
 @font-face {
-    font-family: "EverMono";
+    font-family: "Inconsolata";
     src: url('../font/Inconsolata.otf');
 }
 @font-face {
-    font-family: "EverMonoB";
+    font-family: "InconsolataB";
     src: url('../font/Inconsolata-Bold.ttf');
 }
 
 * {
-    font-family: "EverMono";
+    font-family: "Inconsolata";
 }
 
 header {
@@ -40,7 +40,7 @@ header a {
 }
 
 main h1 {
-    font-family: "EverMonoB";
+    font-family: "InconsolataB";
 }
 
 .divider {

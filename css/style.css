@@ -1,18 +1,18 @@
 @font-face {
-    font-family: "EverMono";
+    font-family: "Inconsolata";
     src: url('../font/Inconsolata.otf');
 }
 @font-face {
-    font-family: "EverMonoB";
+    font-family: "InconsolataB";
     src: url('../font/Inconsolata-Bold.ttf');
 }
 /*@font-face {
-    font-family: "EverMonoO";
-    src: url('../font/evermono-7.0.0/Everson Mono Oblique.ttf');
+    font-family: "InconsolataO";
+    src: url('../font/Inconsolata-7.0.0/Everson Mono Oblique.ttf');
 }
 @font-face {
-    font-family: "EverMonoBO";
-    src: url('../font/evermono-7.0.0/Everson Mono Bold Oblique.ttf');
+    font-family: "InconsolataBO";
+    src: url('../font/Inconsolata-7.0.0/Everson Mono Bold Oblique.ttf');
 }*/
 
 .spinner {
@@ -94,7 +94,7 @@ a:hover {
 }
 
 * {
-    font-family: "EverMono";
+    font-family: "Inconsolata";
 }
 
 header {
@@ -102,11 +102,11 @@ header {
 }
 
 .hero h1 {
-    font-family: "EverMonoB";
+    font-family: "InconsolataB";
 }
 
 .hero h3 {
-    font-family: "EverMono";
+    font-family: "Inconsolata";
 }
 
 .side-nav li {
@@ -122,7 +122,7 @@ header {
 .projects h1 {
     margin-top: 0;
     padding-top: 2.1rem;
-    font-family: "EverMonoB";
+    font-family: "InconsolataB";
 }
 
 .projects .col.l4 {
@@ -144,7 +144,7 @@ header {
 .write h1 {
     margin-top: 0;
     padding-top: 2.1rem;
-    font-family: "EverMonoB";
+    font-family: "InconsolataB";
 }
 
 .write .btn-flat {
