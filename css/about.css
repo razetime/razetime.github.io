@@ -1,0 +1,44 @@
+@font-face {
+    font-family: HKGrotesk;
+    src: url('../font/HKGrotesk-Medium.otf');
+}
+
+@font-face {
+    font-family: WorkSans;
+    src: url('../font/WorkSans-Regular.otf');
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    font-family: HKGrotesk;
+    color: #CAD3C8;
+}
+.title h1 {
+    font-size: 5em;
+}
+.title i {
+    font-size: 2em !important;
+    padding-bottom: 0;
+}
+@media (min-width:1025px) {
+
+    .brand-logo img {
+        margin-left: 1em;
+        margin-top: 0.5em;
+    }
+}
+.title {
+    height: 100%;
+}
+
+
+.brand-logo img {
+    margin-left: 1em;
+    margin-top: 0.5em;
+}
+
+p {
+    font-family: WorkSans;
+    color: #111 !important;
+}

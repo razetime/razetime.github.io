@@ -10,25 +10,31 @@ body, html {
     color: #CAD3C8;
 }
 
-.brand-logo img {
-    margin-left: 1em;
-    margin-top: 0.5em;
-}
+
 
 
 #hero {
     height: 100%;
 }
-h1 {
-    font-size: 5em;
+@media (min-width:1025px) {
+    h1 {
+        font-size: 5em;
+    }
+    .brand-logo img {
+        margin-left: 1em;
+        margin-top: 0.5em;
+    }
+}
+@media (max-width:480px) {
+    #hero h1 {
+        font-size: 3em;
+    }
 }
 #hero img {
     display:block;
     margin:auto;
 }
-.small {
-    font-size: 0.2em;
-}
+
 .about-1 {
     text-align: center;
     color: inherit;
