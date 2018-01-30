@@ -1,0 +1,50 @@
+@font-face {
+    font-family: HKGrotesk;
+    src: url('../font/HKGrotesk-Medium.otf');
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    font-family: HKGrotesk;
+    color: #CAD3C8;
+}
+
+.brand-logo img {
+    margin-left: 1em;
+    margin-top: 0.5em;
+}
+
+
+#hero {
+    height: 100%;
+}
+h1 {
+    font-size: 5em;
+}
+#hero img {
+    display:block;
+    margin:auto;
+}
+.small {
+    font-size: 0.2em;
+}
+.about-1 {
+    text-align: center;
+    color: inherit;
+    text-decoration: none;
+}
+.about {
+    text-align: center;
+    color: inherit;
+    text-decoration: none;
+    -webkit-transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    -moz-transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    -ms-transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    -o-transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+.about:hover {
+    padding: 5em;
+    margin:0;
+}
