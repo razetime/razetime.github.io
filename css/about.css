@@ -12,14 +12,16 @@ body, html {
     width: 100%;
     height: 100%;
     font-family: HKGrotesk;
-    color: #CAD3C8;
+    color: #111;
 }
 .title h1 {
     font-size: 5em;
+    color: #CAD3C8;
 }
 .title i {
     font-size: 2em !important;
     padding-bottom: 0;
+    color: #CAD3C8;
 }
 @media (min-width:1025px) {
 
@@ -41,4 +43,16 @@ body, html {
 p {
     font-family: WorkSans;
     color: #111 !important;
+}
+
+.code {
+    background-color: #bdbdbd;
+}
+
+.write {
+    background-color: #b0bec5;
+}
+
+.music {
+    background-color: #ffd180;
 }
