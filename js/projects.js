@@ -11,4 +11,7 @@ $(document).ready(function() {
         $('.card').fadeOut();
         $('.music').fadeIn();
     });
+    $('#all').click(function() {
+        $('.card').fadeIn();
+    });
 });
