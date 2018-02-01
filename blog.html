@@ -1,0 +1,24 @@
+---
+title: Blog
+layout: page
+icon: create
+---
+
+<div class="row">
+    <div class="col s12">
+        {% for post in site.posts %}
+        <div class="card">
+            <div class="card-content">
+                <div class="card-title">{{ post.title}}</div>
+                <p class="truncate">{{ post.date | date: "%b %-d, %Y" }}</p>
+                <p>{{post.content}}</p>
+            </div>
+            <div class="card-action"><a href="{{ post.url }}">Read More</a></div>
+        </div>
+        <li><a href="{{ post.url }}"></a>
+            <span class="postDate"></span>
+        </li>
+        {% endfor %}
+
+    </div>
+</div>
