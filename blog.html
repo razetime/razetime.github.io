@@ -11,7 +11,7 @@ icon: create
             <div class="card-content">
                 <div class="card-title">{{ post.title}}</div>
                 <p class="truncate">{{ post.date | date: "%b %-d, %Y" }}</p>
-                <p>{{post.content}}</p>
+                <p class="truncate">{{post.content}}</p>
             </div>
             <div class="card-action"><a href="{{ post.url }}">Read More</a></div>
         </div>
