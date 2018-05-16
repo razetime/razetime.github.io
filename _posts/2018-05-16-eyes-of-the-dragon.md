@@ -1,4 +1,8 @@
-# Eyes of the Dragon 
+---
+title: BOOK REVIEW: The Eyes of the Dragon
+layout: default
+---
+# The Eyes of the Dragon 
 ### By Stephen King - A review
 
 Eyes of the dragon is a story set in medieval times about magic and royal blood. It speaks on the topic of parasitic evil in a very abstract manner. 
