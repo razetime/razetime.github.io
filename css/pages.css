@@ -47,3 +47,6 @@ p {
 .music {
     background-color: #ffd180;
 }
+li {
+  list-style-type: none;
+}
