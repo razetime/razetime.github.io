@@ -1,10 +1,14 @@
 ---
 title: The woes of game obsession.
 layout: default
+summary: A random rant on my addiction toward games.
+type: normal
 ---
 
 Yesterday, I finished Super Hexagon. **For the third time.**
+
 It felt really good.
+
 But, I also wondered, what makes me want to play certain games a lot?
 The games that I'd played a lot in the past few years are osu!, League Of Legends, and Online chess.
 All of these have only one thing in common: *They're replayable.*

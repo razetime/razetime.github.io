@@ -22,7 +22,9 @@ body, html {
         margin-top: 0.5em;
     }
 }
-
+.content {
+  color: #333;
+}
 
 
 .brand-logo img {

@@ -23,7 +23,7 @@
                     <li><a href="{{"about.html" | relative_url }}">About Me</a></li>
                     <li><a href="{{"projects.html " | relative_url }}">Projects</a></li>
                     <li><a href="{{"blog " | relative_url }}" class="active">Blog</a></li>
-                    <li><a href="{{"contact..html " | relative_url }}">Contact Me</a></li>
+                    <li><a href="{{"contact.html " | relative_url }}">Contact Me</a></li>
                 </ul>
             </div>
         </nav>
@@ -32,15 +32,22 @@
         <div class="container">
             <div class="row">
                 <div class="s12 col">
-                    <h1>{{ page.title }}</h1>
+                    <div class="container">
+                      <h1>{{ page.title }}</h1>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="section blue-grey lighten-4">
-        <div class="container">
-            {{ content }}
+        <div class="row">
+          <div class="col s12">
+            <div class="container">
+                {{ content }}
+            </div>
+          </div>
         </div>
+    </div>
         <div class="footer hide-on-small-and-down">
             <div class="section blue darken-3">
                 <div class="container">
@@ -54,7 +61,9 @@
         </div>
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script type="text/javascript" src="../js/materialize.min.js"></script>
+        <script type="text/javascript" src="{{"js/posts.js " | relative_url }}">
 
+        </script>
 </body>
 
 </html>

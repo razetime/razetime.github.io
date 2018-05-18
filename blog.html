@@ -2,23 +2,71 @@
 title: Blog
 layout: page
 icon: create
+scripts: /js/infinite-jekyll.js
 ---
 
 <div class="row">
     <div class="col s12">
-        {% for post in site.posts %}
-        <div class="card">
-            <div class="card-content">
-                <div class="card-title">{{ post.title}}</div>
-                <p class="truncate">{{ post.date | date: "%b %-d, %Y" }}</p>
-                <p class="truncate">{{post.summary}}</p>
+        <div class="container">
+          <h1>Latest posts:</h1>
+          <h5>Want all posts?</h5>
+          <a href="" class="btn teal darken-2"></a>
+          {% for post in site.posts limit:10 %}
+          <div class="card">
+              <div class="card-content">
+                  <div class="card-title">{{post.title}}</div>
+
+                  <span class="new badge " data-badge-caption="{{post.type}}"></span>
+                  <hr>
+                  <p class="contents">{{ post.date | date: "%b %-d, %Y" }}</p>
+                  <p class="contents">{{post.summary}}</p>
+              </div>
+              <div class="card-action"><a href="{{ post.url }}">Read More</a></div>
+          </div>
+
+          {% endfor %}
+          <div class="preloader-wrapper big active">
+            <div class="spinner-layer spinner-blue">
+              <div class="circle-clipper left">
+                <div class="circle"></div>
+              </div><div class="gap-patch">
+                <div class="circle"></div>
+              </div><div class="circle-clipper right">
+                <div class="circle"></div>
+              </div>
             </div>
-            <div class="card-action"><a href="{{ post.url }}">Read More</a></div>
-        </div>
-        <li><a href="{{ post.url }}"></a>
-            <span class="postDate"></span>
-        </li>
-        {% endfor %}
+
+            <div class="spinner-layer spinner-red">
+              <div class="circle-clipper left">
+                <div class="circle"></div>
+              </div><div class="gap-patch">
+                <div class="circle"></div>
+              </div><div class="circle-clipper right">
+                <div class="circle"></div>
+              </div>
+            </div>
+
+            <div class="spinner-layer spinner-yellow">
+              <div class="circle-clipper left">
+                <div class="circle"></div>
+              </div><div class="gap-patch">
+                <div class="circle"></div>
+              </div><div class="circle-clipper right">
+                <div class="circle"></div>
+              </div>
+            </div>
+
+            <div class="spinner-layer spinner-green">
+              <div class="circle-clipper left">
+                <div class="circle"></div>
+              </div><div class="gap-patch">
+                <div class="circle"></div>
+              </div><div class="circle-clipper right">
+                <div class="circle"></div>
+              </div>
+            </div>
+          </div>
+        </div><<!-- End container -->
 
     </div>
 </div>
