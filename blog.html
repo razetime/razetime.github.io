@@ -9,15 +9,13 @@ scripts: /js/infinite-jekyll.js
     <div class="col s12">
         <div class="container">
           <h1>Latest posts:</h1>
-          <h5>Want all posts?</h5>
-          <a href="" class="btn teal darken-2"></a>
+          <p>Want to search the blog? <a href="search.html">Go here</a></p>
           {% for post in site.posts limit:10 %}
           <div class="card">
               <div class="card-content">
                   <div class="card-title">{{post.title}}</div>
 
                   <span class="new badge " data-badge-caption="{{post.type}}"></span>
-                  <hr>
                   <p class="contents">{{ post.date | date: "%b %-d, %Y" }}</p>
                   <p class="contents">{{post.summary}}</p>
               </div>
@@ -66,7 +64,7 @@ scripts: /js/infinite-jekyll.js
               </div>
             </div>
           </div>
-        </div><<!-- End container -->
+        </div><!-- End container -->
 
     </div>
 </div>

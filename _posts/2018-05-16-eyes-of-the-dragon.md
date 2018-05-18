@@ -2,14 +2,15 @@
 title: BOOK REVIEW - The Eyes of the Dragon
 layout: default
 summary: A review of the book "The Eyes Of The Dragon" by Stephen King
+type: book review
 ---
 
 
-# The Eyes of the Dragon 
+# The Eyes of the Dragon
 
 ### By Stephen King - A review
 
-Eyes of the dragon is a story set in medieval times about magic and royal blood.
+"The Eyes of the Dragon" is a story set in medieval times about magic and royal blood.
 
 **SPOILERS AHEAD**
 
@@ -21,11 +22,11 @@ King Roland is portrayed as a good king. Not a great king, not a terrible king, 
 
 Like most other novels based on monarchy, the King will have to choose a successor. In this case, it is his oldest son Peter who will succeed him after his passing. He was considered a noble boy from his childhood, and was described as a perfect child, with  a true king's character. I was slightly disappointed by thie way Peter's childhood was set up, as he has everything that made a worthy successor, there were relatively no flaws shown in his character, he was perfect. He was perfect in almost every matter, except when he fell into the magician's trap set for him. Although his emotions were quite clear, he mas maybe.. a bit too perfect, and even his mistakes were takne care of by his extremely loyal friends.
 
-In the background, the author describes the villain. I like the way he has portrayed the villain. He id left ambiguous, and his origin is an enigma. He does not have any grudge against the city, nor does he have anything against the king. He is plainly described as a magician with pale white skin, existing purely for the purpose of spreading evil. In many books I've read before, this type of villian fails to show any purpose, but Flagg the magician is an interesting character in the sense that he had been causing chaos in this kingdom for centuries. 
+In the background, the author describes the villain. I like the way he has portrayed the villain. He id left ambiguous, and his origin is an enigma. He does not have any grudge against the city, nor does he have anything against the king. He is plainly described as a magician with pale white skin, existing purely for the purpose of spreading evil. In many books I've read before, this type of villian fails to show any purpose, but Flagg the magician is an interesting character in the sense that he had been causing chaos in this kingdom for centuries.
 
 Flagg had centuries of experience and expertise in killing off people and causing chaos in a kingdom. He was already causing disturbances as the former king's chief advisor, but he wanted more. He wanted to engulf the palace in bloodshed. He wanted to absolutely destroy what King Roland had struggled to keep together. Hence, he killed the king, and framed his eldest son, Peter, for the murder.
 
-Peter eventually escapes from his prison as the top of a 300ft tall tower using an ingenious method that even Flagg failed to predict, until the story's ending. The theme of loyalty is spread out over the entirety of the novel, where Peter's friends and family support him till the end. Even Thomas, his envious younger brother has a part to play in Peter's crowning, as he is the one to kill Flagg. 
+Peter eventually escapes from his prison as the top of a 300ft tall tower using an ingenious method that even Flagg failed to predict, until the story's ending. The theme of loyalty is spread out over the entirety of the novel, where Peter's friends and family support him till the end. Even Thomas, his envious younger brother has a part to play in Peter's crowning, as he is the one to kill Flagg.
 
 The story justifies itself by using the dragon's head as a pivot around which the story revolves. King Roland had killed it earlier, by sending an arrow through it's throat. Thomas becomes sad and frustrated because Flagg showed him how to spy on his father, through the Dragon's head in his chamber. His father deos not seem to be the noble king he was when he sat on his throne. This was because, he was seeing Through the eyes of the dragon, and all that a dragon sees is green, everything as a shade of the pale green it's eyes are made of, where everything looks like it deserves to burn in agony. This ironically makes Flagg's plan fail, due to the fact that Thomas watched his own father get poisoned by Flagg through the eyes of the dragon.
 

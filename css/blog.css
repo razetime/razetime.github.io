@@ -36,3 +36,7 @@ p {
     font-family:'work_sansmedium';
     color: #111 !important;
 }
+
+.book.review {
+  background-color: #ef9a9a;
+}
