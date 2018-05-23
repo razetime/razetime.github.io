@@ -11,6 +11,10 @@ $(document).ready(function() {
         $('.card').fadeOut();
         $('.music').fadeIn();
     });
+    $('#meme').click(function() {
+      $('.card').fadeOut();
+      $('.meme').fadeIn();
+    });
     $('#all').click(function() {
         $('.card').fadeIn();
     });
