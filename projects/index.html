@@ -25,20 +25,20 @@ scripts: /js/projects.js
 <div class="row">
   <div class="container">
     {% for post in site.posts %}
-    {% if post.categories contains 'blog1' %}
+    {% if post.categories contains 'project' %}
     <div class="col s12 m6">
       <div class="container">
         <div class="card {{project.type}}">
           <div class="card-image">
               <img src="{{project.image}}">
-              <span class="card-title">{{project.title}}</span>
+              <span class="card-title">{{post.title}}</span>
             </div>
           <div class="card-content">
-            <p>{{project.excerpt}}</p>
+            <p>{{post.excerpt}}</p>
           </div>
           <div class="card-action">
-            <a href="{{project.url}}">Read about it</a>
-            <a href="{{project.link}}" class="teal">See it here</a>
+            <a href="{{post.url}}">Read about it</a>
+            <a href="{{post.link}}" class="teal">See it here</a>
           </div>
 
         </div>

@@ -11,7 +11,7 @@ scripts: /js/infinite-jekyll.js
           <h1>Latest posts:</h1>
           <p>Want to search the blog? <a href="search.html">Go here</a></p>
           {% for post in site.posts limit:10 %}
-          {% if post.categories contains 'project' %}
+          {% if post.categories contains 'blog1' %}
           <div class="card">
               <div class="card-content">
                   <div class="card-title">{{post.title}}</div>
