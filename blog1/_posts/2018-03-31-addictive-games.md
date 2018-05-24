@@ -1,6 +1,7 @@
 ---
 title: The woes of game obsession.
 layout: default
+category: blog1
 summary: A random rant on my addiction toward games.
 type: normal
 ---

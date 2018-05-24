@@ -2,6 +2,7 @@
 title: Silent Echoes(Collab. Technohacker)
 layout: default
 type: musin
+category: project
 link: https://soundcloud.com/razetime/razetime-technohacker-silent-echoes
 ---
 

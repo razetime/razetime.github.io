@@ -2,6 +2,7 @@
 title: Content Cop - Homer Simpson
 layout: default
 type: meme
+category: project
 link: https://www.youtube.com/watch?v=GdGEQZ9dCto
 ---
 

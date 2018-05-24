@@ -1,6 +1,7 @@
 ---
 title: BOOK REVIEW - The Eyes of the Dragon
 layout: default
+category: blog1
 summary: A review of the book "The Eyes Of The Dragon" by Stephen King
 type: book review
 ---

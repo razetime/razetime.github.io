@@ -24,7 +24,8 @@ scripts: /js/projects.js
 </div>
 <div class="row">
   <div class="container">
-    {% for project in site.projects %}
+    {% for post in site.posts %}
+    {% if post.categories contains 'blog1' %}
     <div class="col s12 m6">
       <div class="container">
         <div class="card {{project.type}}">
@@ -43,6 +44,8 @@ scripts: /js/projects.js
         </div>
       </div>
     </div>
+    {% endif %}
+
     {% endfor %}
   </div>
 </div>

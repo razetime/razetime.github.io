@@ -1,6 +1,7 @@
 ---
 title: Cross Screen Pong
 layout: default
+category: project
 type: code
 ---
 

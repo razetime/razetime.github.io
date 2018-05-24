@@ -2,6 +2,7 @@
 title: This website
 layout: default
 type: code
+category: project
 link: http://razetime.github.io
 ---
 
