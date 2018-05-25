@@ -23,7 +23,7 @@ script: /js/projects.js
     </div>
 </div>
 <div class="row">
-  <div class="container">
+
     {% for post in site.posts %}
     {% if post.categories contains 'project' %}
     <div class="col s12 m6">
@@ -45,7 +45,7 @@ script: /js/projects.js
 
         </div>
       </div>
-    </div>
+
     {% endif %}
 
     {% endfor %}
