@@ -13,7 +13,9 @@ type: book review
 
 "The Eyes of the Dragon" is a story set in medieval times about magic and royal blood.
 
+
 **SPOILERS AHEAD**
+
 
 The story is well written, like most Stephen King novels, and is presnted in a third person omniscient perspective. The novel starts with an aging king who is in need of a successor, and continues to marry a young lady, almost two decades younger than him.
 

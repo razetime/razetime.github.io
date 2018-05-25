@@ -2,7 +2,7 @@
 title: Projects
 layout: page
 icon: dashboard
-scripts: /js/projects.js
+script: /js/projects.js
 ---
 
 <div class="row">
@@ -27,7 +27,7 @@ scripts: /js/projects.js
     {% for post in site.posts %}
     {% if post.categories contains 'project' %}
     <div class="col s12 m6">
-      <div class="container">
+
         <div class="card {{project.type}}">
           <div class="card-image">
               <img src="{{project.image}}">
@@ -49,5 +49,5 @@ scripts: /js/projects.js
     {% endif %}
 
     {% endfor %}
-  </div>
+
 </div>
