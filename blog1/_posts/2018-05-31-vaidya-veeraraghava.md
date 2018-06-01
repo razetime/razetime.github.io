@@ -1,3 +1,11 @@
+---
+title: Arulmigu Vaidhya Veeraraghava Swamy Koil
+layout: default
+category: blog1
+type: temple review
+---
+
+
 **Arulmigu Vaidhya Veeraraghava Swamy Koil.**
 
 Vaidhya Veeraraghava Swamy <a class="blue lighten-3 tooltipped" data-position="top" data-delay="50" data-tooltip="a temple.(Tamil)">Koil</a> is a temple located in Thiruvallur, a small town in the state of Tamil Nadu, India. It is an enormous temple, with a <a class="blue lighten-3 tooltipped" data-position="top" data-delay="50" data-tooltip="a tank, or pool">Kolam</a> of it's own.
@@ -14,8 +22,8 @@ Famous Hindu temples like this Devasthanam are generally crowded on most days wh
 
 The other important deity in the temple is the Thaayar, who is the wife of Veeraraghava Swamy. Without worshipping the Thaayar, you cannot reap the benefits of your prayer to the Swamy. When you pray to Thaayar, you automatically get her blessings, and you receive the ability to redeem the health benefits that Veeraraghava Swamy bestows upon you.Once you do so, your holy medical checkup is almost over.
 
-#### The power of Salt and Pepper
+##### The power of Salt and Pepper
 
-At the temple, there is a place to deposit salt and pepper. IT might seem peculiar to most, bu there are stalls which sell packets of large crystal salt and peppercorns just outside of the temple. As most would know, Pepper and salt can solve most simple health issues and help with first aid. These are the basic foundations of ayurvedic medicine. Hence, when you deposit salt and pepper at the temple, you are giving Veeraraghava Swamy the tools to prepare your medication, so he can give it back to your in the form of his blessings. In this way, you also show your respect towards the god.
+At the temple, there is a place to deposit salt and pepper. It might seem peculiar to most, but there are stalls which sell packets of large crystal salt and peppercorns just outside of the temple. As most would know, Pepper and salt can solve most simple health issues and help with first aid. These are the basic foundations of ayurvedic medicine. Hence, when you deposit salt and pepper at the temple, you are giving Veeraraghava Swamy the tools to prepare your medication, so he can give it back to your in the form of his blessings. In this way, you also show your respect towards the god.
 
 Overall, the temple is well made and maintained. It has internal air conditioning near the deity, to give relief from the hot sun outside. I'm very happy that this temple has survived the test of time, and has maintained it's overall look very well. I really liked the temple and it's friendly staff. It is an excellent holy abode, and a great place to visit.
