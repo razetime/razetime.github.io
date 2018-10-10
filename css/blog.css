@@ -44,7 +44,7 @@ ul {
     color: #111 !important;
 }
 
-ul>li {
+ul li {
   list-style-type: circle;
 }
 
