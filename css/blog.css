@@ -22,6 +22,8 @@ body, html {
         margin-top: 0.5em;
     }
 }
+
+
 .content {
   color: #333;
 }
@@ -35,6 +37,15 @@ body, html {
 p {
     font-family:'work_sansmedium';
     color: #111 !important;
+}
+
+ul {
+    font-family:'work_sansmedium';
+    color: #111 !important;
+}
+
+ul>li {
+  list-style-type: circle;
 }
 
 .book.review {
