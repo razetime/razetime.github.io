@@ -1,6 +1,7 @@
 ---
 title: Blog
 layout: page
+color: sugar
 icon: create
 scripts: /js/infinite-jekyll.js
 ---
@@ -9,18 +10,19 @@ scripts: /js/infinite-jekyll.js
     <div class="col s12">
         <div class="container">
           <h1>Latest posts:</h1>
-          <p>Want to search the blog? <a href="search.html">Go here</a></p>
           {% for post in site.posts limit:10 %}
           {% if post.categories contains 'blog1' %}
-          <div class="card">
-              <div class="card-content">
-                  <div class="card-title">{{post.title}}</div>
+          <div class="row">
+            <div class="col s12">
+                  <h2>{{post.title}}</h2>
 
                   <span class="new badge " data-badge-caption="{{post.type}}"></span>
                   <p class="contents">{{ post.date | date: "%b %-d, %Y" }}</p>
                   <p class="contents">{{post.excerpt}}</p>
+
+              <h4><a href="{{ post.url }}">Read More</a></h4>
+              <hr>
               </div>
-              <div class="card-action"><a href="{{ post.url }}">Read More</a></div>
           </div>
           {% endif %}
           {% endfor %}

@@ -1,4 +1,4 @@
-
+@font-face {font-family: "FF Tisa"; src: url("//db.onlinewebfonts.com/t/aef726001a07788d4c639a835fa10360.eot"); src: url("//db.onlinewebfonts.com/t/aef726001a07788d4c639a835fa10360.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/aef726001a07788d4c639a835fa10360.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/aef726001a07788d4c639a835fa10360.woff") format("woff"), url("//db.onlinewebfonts.com/t/aef726001a07788d4c639a835fa10360.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/aef726001a07788d4c639a835fa10360.svg#FF Tisa") format("svg"); }
 
 body, html {
     width: 100%;
@@ -8,12 +8,11 @@ body, html {
 }
 .title h1 {
     font-size: 3em;
-    color: #ddd;
 }
 .title i {
     font-size: 2em !important;
     padding-bottom: 0;
-    color: #CAD3C8;
+    color: #fff;
 }
 @media (min-width:1025px) {
 
@@ -35,12 +34,12 @@ body, html {
 }
 
 p {
-    font-family:'work_sansmedium';
+    font-family:'FF Tisa';
     color: #111 !important;
 }
 
 ul {
-    font-family:'work_sansmedium';
+    font-family:'FF Tisa';
     color: #111;
 }
 
@@ -50,4 +49,7 @@ ul {
 
 .book.review {
   background-color: #ef9a9a;
+}
+footer  {
+  font-family: "hk_groteskmedium";
 }

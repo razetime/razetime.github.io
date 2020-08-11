@@ -1,3 +1,4 @@
+@font-face {font-family: "FF Tisa"; src: url("//db.onlinewebfonts.com/t/aef726001a07788d4c639a835fa10360.eot"); src: url("//db.onlinewebfonts.com/t/aef726001a07788d4c639a835fa10360.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/aef726001a07788d4c639a835fa10360.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/aef726001a07788d4c639a835fa10360.woff") format("woff"), url("//db.onlinewebfonts.com/t/aef726001a07788d4c639a835fa10360.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/aef726001a07788d4c639a835fa10360.svg#FF Tisa") format("svg"); }
 
 body, html {
     width: 100%;
@@ -7,12 +8,12 @@ body, html {
 }
 .title h1 {
     font-size: 5em;
-    color: #CAD3C8;
+    color: #fff;
 }
 .title i {
     font-size: 2em !important;
     padding-bottom: 0;
-    color: #CAD3C8;
+    color: #fff;
 }
 @media (min-width:1025px) {
 
@@ -20,9 +21,6 @@ body, html {
         margin-left: 1em;
         margin-top: 0.5em;
     }
-}
-.title {
-    height: 100%;
 }
 
 
@@ -32,12 +30,25 @@ body, html {
 }
 
 p {
-    font-family:'work_sansmedium';
-    color: #111 !important;
+    font-family:'FF Tisa';
+    color: #111 ;
+    font-size: 1.1em;
+}
+.seagreen {
+  background-color: #78C091;
+}
+.khaki {
+  background-color: #bcaa99;
+}
+.sugar {
+  background-color: #8e5572;
+}
+.glaucous {
+  background-color: #6987c9;
 }
 
 .code {
-    background-color: #bdbdbd;
+    background-color: rgba(255, 255, 255, 0.89);
 }
 
 .write {
@@ -49,4 +60,8 @@ p {
 }
 li {
   list-style-type: none;
+}
+.footer p {
+  font-family: "hk_groteskmedium" !important;
+  color: #fff;
 }
