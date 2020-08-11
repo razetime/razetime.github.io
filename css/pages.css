@@ -1,20 +1,28 @@
-@font-face {font-family: "FF Tisa"; src: url("//db.onlinewebfonts.com/t/aef726001a07788d4c639a835fa10360.eot"); src: url("//db.onlinewebfonts.com/t/aef726001a07788d4c639a835fa10360.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/aef726001a07788d4c639a835fa10360.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/aef726001a07788d4c639a835fa10360.woff") format("woff"), url("//db.onlinewebfonts.com/t/aef726001a07788d4c639a835fa10360.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/aef726001a07788d4c639a835fa10360.svg#FF Tisa") format("svg"); }
+@font-face {
+    font-family: "FF Tisa";
+    src: url("//db.onlinewebfonts.com/t/aef726001a07788d4c639a835fa10360.eot");
+    src: url("//db.onlinewebfonts.com/t/aef726001a07788d4c639a835fa10360.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/aef726001a07788d4c639a835fa10360.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/aef726001a07788d4c639a835fa10360.woff") format("woff"), url("//db.onlinewebfonts.com/t/aef726001a07788d4c639a835fa10360.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/aef726001a07788d4c639a835fa10360.svg#FF Tisa") format("svg");
+}
 
-body, html {
+body,
+html {
     width: 100%;
     height: 100%;
-    font-family:'hk_groteskmedium';
+    font-family: 'hk_groteskmedium';
     color: #111;
 }
+
 .title h1 {
     font-size: 5em;
     color: #fff;
 }
+
 .title i {
     font-size: 2em !important;
     padding-bottom: 0;
     color: #fff;
 }
+
 @media (min-width:1025px) {
 
     .brand-logo img {
@@ -30,25 +38,29 @@ body, html {
 }
 
 p {
-    font-family:'FF Tisa';
-    color: #111 ;
+    font-family: 'FF Tisa';
+    color: #111;
     font-size: 1.1em;
 }
+
 .seagreen {
-  background-color: #78C091;
+    background-color: #78C091;
 }
+
 .khaki {
-  background-color: #bcaa99;
+    background-color: #bcaa99;
 }
+
 .sugar {
-  background-color: #8e5572;
+    background-color: #8e5572;
 }
+
 .glaucous {
-  background-color: #6987c9;
+    background-color: #6987c9;
 }
 
 .code {
-    background-color: rgba(255, 255, 255, 0.89);
+    background-color: rgb(219, 219, 219);
 }
 
 .write {
@@ -58,10 +70,12 @@ p {
 .music {
     background-color: #ffd180;
 }
+
 li {
-  list-style-type: none;
+    list-style-type: none;
 }
+
 .footer p {
-  font-family: "hk_groteskmedium" !important;
-  color: #fff;
+    font-family: "hk_groteskmedium" !important;
+    color: #fff;
 }

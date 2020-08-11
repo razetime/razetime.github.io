@@ -5,9 +5,7 @@ category: blog1
 type: book review
 ---
 
-### Star Island by Carl Hiassen
-
-Star Island was probably one of the most fun books I'd read tin the recent times. It's chock full of humour and coontains staccato bursts of sillines in the midst of a gloomy narrative filled with equally gloomy characters.
+Star Island was probably one of the most fun books I'd read tin the recent times. It's chock full of humour and coontains staccato bursts of silliness in the midst of a gloomy narrative filled with equally gloomy characters.
 
 Generally, when you're looking for a thriller, you'd think of a general basic skeleton that has been fed to you over and over again through multiple wirters. It's not a bad format, just that it's been repeated so much to you that it feel akin to the instructions on a shampoo bottle. 
 
