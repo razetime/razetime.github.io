@@ -9,7 +9,11 @@ $(document).ready(function() {
     });
     $('#musin').click(function() {
         $('.card').fadeOut();
-        $('.music').fadeIn();
+        $('.musin').fadeIn();
+    });
+    $('#meme').click(function() {
+      $('.card').fadeOut();
+      $('.meme').fadeIn();
     });
     $('#all').click(function() {
         $('.card').fadeIn();

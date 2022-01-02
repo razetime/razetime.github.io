@@ -8,6 +8,7 @@ body, html {
 }
 .title h1 {
     font-size: 3em;
+    color: #DAF5FF;
 }
 .title i {
     font-size: 2em !important;

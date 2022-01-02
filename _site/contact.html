@@ -2,14 +2,22 @@
 <html lang="en">
 
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-61576985-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-61576985-1');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Razetime | Contact</title>
     <!--Import Font Awesome icons-->
     <script src="https://use.fontawesome.com/b37d1a72c6.js"></script>
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
     <link rel="stylesheet" href="font/stylesheet.css">
@@ -20,57 +28,48 @@
 <body>
     <div class="navbar-fixed">
         <nav class="cyan darken-4">
-            <a href="#" class="brand-logo"><img src="img/navlogo.png" alt="Home"></a>
+            <a href="index.html" class="brand-logo"><img src="img/navlogo.png" alt="Home"></a>
             <div class="nav-wrapper">
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Me</a></li>
-                    <li><a href="{{"projects" | relative_url }}">Projects</a></li>
-                    <li><a href="blog">Blog</a></li>
-                    <li class="active"><a href="{{"contact.html" | relative_url }}">Contact Me</a></li>
+                    <li><a href="projects">Projects</a></li>
+                    <li><a href="blog1">Blog</a></li>
+                    <li class="active"><a href="contact.html">Contact Me</a></li>
                 </ul>
             </div>
         </nav>
     </div>
-    <div class="section cyan darken-2 title">
+    <div class="section glaucous title">
         <div class="container">
             <div class="row">
-                <div class="col s12 hide-on-med-and-down">
-                    <h1 class="center"><i class="material-icons">contacts</i></h1>
-                </div>
+                
                 <div class="col s12">
-                    <h1 class="center">CONTACT ME</h1>
+                    <h1 class="center">CONTACT</h1>
                 </div>
             </div>
         </div>
     </div>
-    <div class="section blue-grey lighten-3">
+    <div class="section white">
         <div class="container">
             <div class="row">
                 <div class="col s12">
-                    <h5>Email:</h5>
-                    <p>If you want to contact me personally, It'd be best that you use email.</p>
-                    <a href="razetime@gmail.com" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">mail</i></a>
-                    <h5>Social Media:</h5>
-                    <p>If you would like to keep in touch with updates from my blog, or my upcoming projects, Social media is the best place to do so.</p>
-                    <a href="https://plus.google.com/+RaghuAlwaysPwninAllTheTime" class="btn-floating btn-large waves-effect waves-light red"><i class="fa fa-google-plus"></i></a>
+                    <h4>Mail & Social Media</h4>  
+                    
+                    <a href="img/mail.png" class="btn-floating btn-large waves-effect waves-light red"><i class="fa fa-envelope"></i></a>
+                    
+                    <!-- <a href="https://plus.google.com/+RaghuAlwaysPwninAllTheTime" class="btn-floating btn-large waves-effect waves-light red"><i class="fa fa-google-plus"></i></a> -->
                     <a href="https://twitter.com/@razetime" class="blue lighten-1 btn-floating btn-large waves-effect waves-light red"><i class="fa fa-twitter"></i></a>
-                    <h5>Other places:</h5>
-                    <p>Open source projects or Organisations:</p>
+                    
                     <a href="https://github.com/razetime/" class="btn-floating btn-large waves-effect waves-light grey darken-3"><i class="fa fa-github"></i></a>
-                    <p>Up for a chess game?</p>
+                    <p>Chess:</p>
                     <a href="https://lichess.org/@/rallzetime" class="btn btn-large waves-effect waves-light yellow darken-3">Challenge me on lichess</a>
-                    <p>Want to ask me a question?</p>
-                    <a href="https://www.quora.com/profile/Raghu-R-11" class="btn-floating btn-large waves-effect waves-light red darken-1"><i class="fa fa-quora"></i></a>
-                    <a href="https://ask.fm/razetime" class="btn btn-large waves-effect waves-light red darken-1">Ask.fm</a>
-                    <p>Got good memes? Want good memes?</p>
-                    <a href="https://www.reddit.com/user/razetime" class="btn-floating btn-large waves-effect waves-light red lighten-1"><i class="fa fa-reddit"></i></a>
-                </div>
+                    </div>
             </div>
         </div>
     </div>
     <div class="footer hide-on-small-and-down">
-        <div class="section blue darken-3">
+        <div class="section cyan darken-4">
             <div class="container">
                 <div class="row">
                     <div class="col s12">

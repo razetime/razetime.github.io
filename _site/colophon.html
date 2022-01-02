@@ -2,6 +2,16 @@
 <html lang="en">
 
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-61576985-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-61576985-1');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -12,31 +22,28 @@
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="/css/materialize.min.css" media="screen,projection" />
     <link rel="stylesheet" href="/font/stylesheet.css">
-    <link rel="stylesheet" href="/css/normalize.css">
+
     <link rel="stylesheet" href="/css/pages.css">
 </head>
 
 <body>
     <div class="navbar-fixed">
         <nav class="cyan darken-4">
-            <a href="#" class="brand-logo"><img src="../img/navlogo.png" alt="Home"></a>
+            <a href="http://razetime.github.io" class="brand-logo"><img src="../img/navlogo.png" alt="Home"></a>
             <div class="nav-wrapper">
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Me</a></li>
-                    <li><a href="{{"projects" | relative_url }}">Projects</a></li>
-                    <li><a href="blog" class="active">Blog</a></li>
-                    <li><a href="{{"contact.html" | relative_url }}">Contact Me</a></li>
+                    <li><a href="https://razetime.github.io">Home</a></li>
+                    <li><a href="/about">About Me</a></li>
+                    <li><a href="/projects">Projects</a></li>
+                    <li><a href="/blog1" class="active">Blog</a></li>
+                    <li><a href="/contact.html">Contact Me</a></li>
                 </ul>
             </div>
         </nav>
     </div>
-    <div class="section cyan darken-2 title">
+    <div class="section  title">
         <div class="container">
             <div class="row">
-                <div class="col s12 hide-on-med-and-down">
-                    <h1 class="center"><i class="material-icons">code</i></h1>
-                </div>
                 <div class="col s12">
                     <h1 class="center" style="text-transform:uppercase;">colophon</h1>
                 </div>
@@ -44,26 +51,36 @@
         </div>
     </div>
 
-    <div class="section blue-grey lighten-3">
+    <div class="section white">
         <div class="container">
-            ###About this site
-This site is coded mostly in static HTML
+            <h3 id="about-this-site">About this site</h3>
+
+<p>This site is coded mostly in static HTML, built using the <a href="http://jekyllrb.org">jekyll</a> static site generator.</p>
+
+<p>It also uses <a href="http://github.com/tobiasahlin">Tobias Ahlin</a>’s Jekyll lazy load script for the blog page, situated <a href="https://github.com/tobiasahlin/infinite-jekyll">here</a>.</p>
+
+<p>All pages, layouts and themeable items in this site are made by me.</p>
+
+<p>This website uses the <a href="http://www.materializecss.com">Materialize CSS framework</a> for UI elements and responsive elements. It provides the overall material design aesthetic and feel to this site.</p>
 
         </div>
-        <div class="footer hide-on-small-and-down">
-            <div class="section blue darken-3">
-                <div class="container">
-                    <div class="row">
-                        <div class="col s12">
-                            <p>The code of this website is licensed under the <a href="LICENSE.md">MIT License.</a> | <a href="privacy.html">Privacy</a> | <a href="colophon.html">Colophon</a></p>
-                        </div>
+    </div>
+    <div class="footer hide-on-small-and-down">
+        <div class="section cyan darken-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12">
+                        <p>The code of this website is licensed under the <a href="LICENSE.md">MIT License.</a> | <a href="privacy.html">Privacy</a> | <a href="colophon.html">Colophon</a></p>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script type="text/javascript" src="/js/materialize.min.js"></script>
+        <script type="text/javascript" src="" | relative_url}}">
 
+        </script>
 </body>
 
 </html>
