@@ -1,0 +1,15 @@
+
+
+html, body {
+  height: 100%;
+  font-family: "Fenix", serif;
+  font-size: 1em;
+  background: #000729;
+  color: rgb(228, 228, 228);
+
+}
+
+pre, code {
+  background-color: rgb(4, 0, 22);
+  border: none;
+}
