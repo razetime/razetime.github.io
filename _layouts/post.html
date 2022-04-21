@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }}</title>
+  <title>Blog | {{ page.title }}</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,8 +16,13 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
   />
+  <link rel="stylesheet" href="{{ "style.css" | relative_url }}" />
 </head>
 <body>
   
+  <div class="container"><br>
+    <a href="{{ "/" | relative_url }}" style="padding-right: 0.5em;">← Home</a>
+    <a href="{{ "/blog" | relative_url }}">← Back to Blog</a>
+    <br><h2>{{ page.title }}</h2>{{content}}</div>
 </body>
 </html>

@@ -9,3 +9,7 @@ html, body {
 
 }
 
+pre, code {
+  background-color: rgb(4, 0, 22);
+  border: none;
+}
