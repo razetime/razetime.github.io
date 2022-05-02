@@ -14,4 +14,4 @@ I like writing learning materials and documentation for things I learn. Occasion
 
 I've currently decided that I like language development and compilers. I like to help around with open source communities revolving around languages.
 
-I like watching moviesnd writing about them. You can see my reviews on [Letterboxd](https://letterboxd.com/razetime).
+I like watching movies and writing about them. You can see my reviews on [Letterboxd](https://letterboxd.com/razetime).
