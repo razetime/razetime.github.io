@@ -27,4 +27,21 @@ permalink: /cool/
 - [exmilitary](http://exmilitai.re/film.html)
 - [Bruce and Katharine Cornwell](https://vimeo.com/channels/bkcfilms)
 
+###### Boards
+- [murder zone](http://murder.zone/)
+
+###### Webrings
+- [GEORGE](https://george.gh0.pw/)
+- [nojs](https://nojs.sugarfi.dev/)
+
+###### Games
+- [,flappy fly bird man?](https://ubq323.website/ffbm/)
+- [Elephant Rave](http://www.jmtb02.com/elephantrave)
+- [Super Hexagon](https://superhexagon.com/)
+
+###### Articles
+- [How to Ungrade](https://www.jessestommel.com/how-to-ungrade/)
+
+###### Talks
+- []
 <iframe src="https://john.citrons.xyz/embed?ref=razetime.github.io" style="margin-left:auto;display:block;margin-right:auto;max-width:732px;width:100%;height:94px;border:none;"></iframe>
