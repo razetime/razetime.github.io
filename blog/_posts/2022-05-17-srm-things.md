@@ -65,3 +65,5 @@ type: edu
 - Prep for exams like TOEFL, GRE, GMAT and such before your third year, and finish them before your 
   fourth year. This will let you spend time on writing an application and improving your chances of
   getting a good master program.
+- Previous year question papers are very useful, and sometimes SRM just recycles them for newer exams.
+  Some previous year papers are available at the library, and you can also ask your seniors.
