@@ -4,6 +4,8 @@ layout: post
 type: edu
 ---
 
+A few tips if you're joining SRM VDP.
+
 - SRM VDP is a depressing place. If you have the ability to choose, choose a bigger campus. Or a 
   different college.
 - Many people prefer to ditch the hostel for a different accomodation. I do know the food is not good
