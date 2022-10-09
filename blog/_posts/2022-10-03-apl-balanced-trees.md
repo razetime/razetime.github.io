@@ -1,5 +1,6 @@
 ---
 tags: [array]
+layout: post
 title: Some balanced binary trees in APL
 type: code
 ---
@@ -20,7 +21,7 @@ Let's take the following tree as example:
     + - 31 (7)
     + - 42 (8)
 ```
-## BST (Binary Search Tree)
+#### BST (Binary Search Tree)
 
 **[Aaron Hsu repr](https://www.youtube.com/watch?v=hzPd3umu78g):**
 
@@ -45,7 +46,7 @@ jt←↑(2 6) (3 5) (4 0) (0 0) (0 0) (7 8) (0 0) (0 0) ⍝ child nodes
 jd← 27    14    10    3     19    35    31    42    ⍝ data
 ```
 
-### Searching and Insertion
+##### Searching and Insertion
 
 Effectively a binary search which is arguably better done by sorting the data array and using interval index. However, it is not
 too complex to do a search on both tree representations:
@@ -80,7 +81,7 @@ InsertAH ← {
 }
 ```
 
-## AVL trees
+#### AVL trees
 
 Here we will be using Aaron Hsu's repr only, for an AVL tree, we can track depths of each vertex:
 ```
@@ -88,7 +89,7 @@ d ←  27    14    10    19    35    31    42
 dp ← 1     2     3     3     2     3     3
 ```
 
-### Rotation
+##### Rotation
 
 The steps for left rotation about a given node are: 
 
@@ -144,6 +145,6 @@ LRotAH ← {
 ```
 
 Finally, we can insert stuff in the tree with the existing BST insertion, and these rotations. There's four cases listed at
-[geeksforgeeks](https://www.geeksforgeeks.org/avl-tree-set-1-insertion/)
+[geeksforgeeks](https://www.geeksforgeeks.org/avl-tree-set-1-insertion/), which are somewhat simple to handle with indexing.
 
 Code for these is available in [this gist.](https://gist.github.com/razetime/b3c1a11fe5ecb030bacd6a0780575f91)
