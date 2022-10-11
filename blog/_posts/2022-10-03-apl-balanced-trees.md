@@ -30,7 +30,7 @@ Let's call this AH.
 Uses a parent vector, left sibling, data vectors.
 
 We use position here rather than node to the left because position matters in a binary search tree.
-```
+```apl
 ap←1  1  2  3 2  1  6  6 ⍝ parent nodes
 al←1  1  1  1 2  1  1  1 ⍝ position (left=1/right=2)
 ad←27 14 10 3 19 35 31 42 ⍝ data
@@ -41,7 +41,7 @@ ad←27 14 10 3 19 35 31 42 ⍝ data
 
 Let's call this JE. The second version explored on the page is very similar to Aaron Hsu's idea.
 
-```
+```apl
 jt←↑(2 6) (3 5) (4 0) (0 0) (0 0) (7 8) (0 0) (0 0) ⍝ child nodes
 jd← 27    14    10    3     19    35    31    42    ⍝ data
 ```
@@ -52,7 +52,7 @@ Effectively a binary search which is arguably better done by sorting the data ar
 too complex to do a search on both tree representations:
 
 For the JE repr, since the number of nodes is part of the structure, it is somewhat simple to modify the data:
-```
+```apl
 FindJE ← {
   (t d)←⍺
   s←⍵
@@ -68,7 +68,7 @@ InsertJE ← {
 ```
 
 For AH, I found it much simpler to use a recursive function to find a required node.
-```
+```apl
 FindAH ← {
   (p l d)←⍺ ⍝ full tree
   s←⍵ ⍝ 
@@ -84,7 +84,7 @@ InsertAH ← {
 #### AVL trees
 
 Here we will be using Aaron Hsu's repr only, for an AVL tree, we can track depths of each vertex:
-```
+```apl
 d ←  27    14    10    19    35    31    42
 dp ← 1     2     3     3     2     3     3
 ```
@@ -128,7 +128,7 @@ RRotAH ← {
 ```
 
 A similar technique can be used for a left rotation:
-```
+```apl
 LRotAH ← {
   (p l d h)←⍺
   x←⍵

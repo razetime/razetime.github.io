@@ -42,6 +42,4 @@ permalink: /cool/
 ###### Articles
 - [How to Ungrade](https://www.jessestommel.com/how-to-ungrade/)
 
-###### Talks
-- []
 <iframe src="https://john.citrons.xyz/embed?ref=razetime.github.io" style="margin-left:auto;display:block;margin-right:auto;max-width:732px;width:100%;height:94px;border:none;"></iframe>
