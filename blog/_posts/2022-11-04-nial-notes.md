@@ -23,7 +23,7 @@ writing Nial code.
 - `Pi` is a predefined constant. you may want higher precision, however.
 - `=` does not vectorize and `match` does (counter intuitive). 
 - grid is `⍳≢`
-- Nial has a "quote" syntax (!) that lets you convert functions to values. See `cast` and `apply` in the dictionary.
+- Nial has a "quote" syntax (`!`) that lets you convert functions to values. See `cast` and `apply` in the dictionary.
   - Not exactly first class functions, since they expose an internal numeric-array representation.
 
 ##### Style Guide
@@ -34,7 +34,7 @@ writing Nial code.
 - Nial ignores capitalization on all identifiers and primitive names. You can camelcase keywords like `For` and 
   `While` since they don't behave like ordinary nial constructs.
 
-**Few equivalences bwtween APL and Nial:**
+**Few equivalences between APL and Nial:**
 
 | Function       | Monad | Dyad
 | --------       | ----  | ----
