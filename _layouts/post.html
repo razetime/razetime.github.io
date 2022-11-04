@@ -17,6 +17,9 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
   />
   <link rel="stylesheet" href="{{ "style.css" | relative_url }}" />
+  {% if page.type == "code" %}
+    <link rel="stylesheet" href="{{ "theme.css" | relative_url }}" />
+  {% endif %}
 </head>
 <body>
   
