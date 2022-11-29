@@ -29,6 +29,8 @@ them here. This page will be updated as I get better at Mercury.
 - `read_named_file_as_lines("file",I,!IO),`, reads lines to `I`. Similar predicates are very simple, provide `ok`/`error`
 
 ##### Lists
+- use `filter_map` instead of map whenever you need to use a nondeterministic predicate that will always return a result for
+  your purposes. It also comes with the upside of keeping your outer predicate `det`.
 - `map_foldl` is a like scanl but more generalist in some ways. If you return rhe same output for both you get a scan.
 - `foldl` gets confused with `string.foldl` and it gives an overloading error that is.. difficult to figure out
 - All the folds have the predicate argument take args in a flipped manner (Next,Prev,Out)
