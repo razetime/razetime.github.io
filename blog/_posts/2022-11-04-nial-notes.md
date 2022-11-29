@@ -49,6 +49,7 @@ writing Nial code.
 | `∘.(,⍥⊂)`      | `cart` | -
 | `/`            | - | `sublist` (bool only)
 | `∪`            | `cull` | `cull link`
+| `⊂`,`⊆`        | `single`, `solitary`   | `cutall`, `cut`
 
 **Some notes on functions from iconoclast**
 
