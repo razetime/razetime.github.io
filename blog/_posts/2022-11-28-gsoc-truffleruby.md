@@ -25,7 +25,9 @@ of basic tutorials on how to write a proposal, so here I'll just explain why the
 - [Ruby proposal](https://docs.google.com/document/d/18TbvIIMCtPjz46HWYUmxh2hyKDq6QA8HHwunUFfZ3cU/edit?usp=sharing)
 *accepted*
   - This one has a lot of relevant, well understood references. The working process is documented much better as well.
-  - The main difference here is that I sat down with my mentor [Benoit Daloze](https://github.com/eregon/) and figured out the exact details to put here. He pretty much carried me on this end.
+  - The main difference here is that I sat down with my mentor [Benoit Daloze](https://github.com/eregon/) and figured out the exact details to put here. He provided a lot of the data on this end.
+
+Get to know your org mentors early, and decide on a project as early as possible. It'll make your proposal (and project) much better.
 
 ##### The Project
 The base project was adding pattern matching features to TruffleRuby, as per Ruby 3.0. You can see the relevant info in the proposal.
