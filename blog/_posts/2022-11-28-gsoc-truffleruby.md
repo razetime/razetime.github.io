@@ -25,13 +25,15 @@ of basic tutorials on how to write a proposal, so here I'll just explain why the
 - [Ruby proposal](https://docs.google.com/document/d/18TbvIIMCtPjz46HWYUmxh2hyKDq6QA8HHwunUFfZ3cU/edit?usp=sharing)
 *accepted*
   - This one has a lot of relevant, well understood references. The working process is documented much better as well.
-  - The main difference here is that I sat down with my mentor [Benoit Daloze](https://github.com/eregon/) and figured out the exact details to put here. He provided a lot of the data on this end.
+  - The main difference here is that I sat down with my mentor [Benoit Daloze](https://github.com/eregon/) and figured out the
+  exact details to put here. He provided a lot of the data on this end.
 
 Get to know your org mentors early, and decide on a project as early as possible. It'll make your proposal (and project) much
 better. Mentors are very, very cool people, and showing genuine interest in their work goes a long way.
 
 ##### The Project
-The base project was adding pattern matching features to TruffleRuby, as per Ruby 3.0. You can see the relevant info in the proposal.
+The base project was adding pattern matching features to TruffleRuby, as per Ruby 3.0. You can see the relevant info in the
+proposal.
 
 The community bonding period is very useful. I did not get much time to
 spend during this, so I was lagging a bit. My environment was setup, but
@@ -48,7 +50,8 @@ it's almost necessary, cause IntelliJ even despite its weirdness makes a lot of 
 parts of Java more bearable.
 
 I also switched from using `rvm` to `ruby-install`, `ruby-build` and `chruby`, and
-[reputable sources](https://eregon.me/blog/2021/06/04/review-of-ruby-installers-and-switchers.html) recommend that you do so as well.
+[reputable sources](https://eregon.me/blog/2021/06/04/review-of-ruby-installers-and-switchers.html) recommend that you do so as
+well.
 
 ###### The Parser
 The first step of the project was modifying the parser, which is a port of the JRuby
@@ -71,17 +74,17 @@ contains the java code that does the dirty work for our yacc parser.
 - Debugging tips:
   - Run `jt test fast`, but more importantly use `jt test <file>` on the relevant spec
   file. `grep` for `SyntaxError`s to simplify.
-  - TruffleRuby inherits a bad thing from JRuby where it uses Java's `null` for both
-  `nil` and empty blocks.
-  You will probably run into this mistake somewhere and you will hate it as much as I 
-  and @eregon do.
+  - TruffleRuby inherits a quirk from JRuby where it uses Java's `null` for both
+  `nil` and empty blocks. The JRuby codebase will sometimes have a solution to the odd problems that arise from this.
+  You will probably run into this somewhere and you will hate it as much as I and @eregon do.
   - There are some useful debug tools in
   [generate_parser](https://github.com/oracle/truffleruby/blob/master/tool/generate_parser):
     - Line 13, where there's a debug flag
-    - Line 45, where `$JAY -v $DEBUG_FLAG $PARSER_BASE.y < skeleton.parser | grep -v $DEBUG_STRIP >$PARSER_BASE.out` should give more verbose output.
+    - Line 45, where `$JAY -v $DEBUG_FLAG $PARSER_BASE.y < skeleton.parser | grep -v $DEBUG_STRIP >$PARSER_BASE.out` should give
+     more verbose output.
 
 The only way out in the parser is trial and error, so practice your patience. You'll
-also want to check the lint errors for RubyParser.java for typos. Some things from JRuby
+also want to check the lint errors for RubyParser.java for typos. Some things from the JRuby
 ended up being unnecessary in TruffleRuby.
 
 Even with all these things, some problems with my parser port did not go away. These
@@ -89,7 +92,8 @@ may be resolved in the new upcoming Ruby parser, or I will have to spend hours f
 out why it hates me.
 
 ###### The Translator
-Once Ruby code goes through the parser, it gets turned into `ParseNode`s. Once parsing is done, we go into the actual GraalVM bits of the project. 
+Once Ruby code goes through the parser, it gets turned into `ParseNode`s. Once parsing is done, we go into the actual GraalVM
+bits of the project. 
 
 Truffle is the language implementation framework that makes TruffleRuby possible. To fit
 into Truffle, we need to now convert these parse nodes into `RubyNodes`. These RubyNodes
@@ -99,7 +103,7 @@ program.
 This part of the project is where I realized I had to keep up with the main repo.
 TruffleRuby is a very active project, so I recommend rebasing every time there's a big
 change, or you're more than 50 commits behind. I completely missed the migration to `TruffleString` during this project, and
-I had to spend a lot fo time figuring it out.
+I had to spend a lot of time figuring it out.
 
 With Benoit's help, I created two new translator classes, one as a base translator,
 and one specifically for pattern matching. Meeetings became more frequent as the project progressed, since the Translators have
