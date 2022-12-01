@@ -13,3 +13,7 @@ pre, code {
   background-color: rgb(4, 0, 22);
   border: none;
 }
+blockquote {
+  border-left: 2px solid #5e5e5e;
+  padding-left: 10px;
+}

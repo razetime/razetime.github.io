@@ -8,7 +8,7 @@ I saw this video from Eric Rowland a few days back, about an exact mathematical 
 
 <iframe width="560" height="315" src="https://yewtu.be/embed/j5s0h42GfvM" title="yewtube player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-> 13:21: It shows that you can use basic arithmetic functions a programming language
+> 13:21: It shows that you can use basic arithmetic functions in a programming language
 <br />
 > 13:25: and that that programming language is expressive enough to describe the nth prime number.
 
