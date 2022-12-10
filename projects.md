@@ -21,7 +21,7 @@ This page is a list of my solo projects. For a comprehensive list, see [Github](
   <div class="six columns" markdown="1">
 
 ###### Highlighters, Plugins 
-  - [k-akoune](https://github.com/razetime/bqn-vscode)
+  - [k-akoune](https://github.com/razetime/k-akoune)
   - [bqn-vscode](https://github.com/razetime/bqn-vscode)
   - [rouge Nial](https://github.com/razetime/rouge)
   - [highlightjs-bqn](https://github.com/razetime/highlightjs-bqn)
