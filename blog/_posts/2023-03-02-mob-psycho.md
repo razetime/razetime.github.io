@@ -10,7 +10,7 @@ Mob Psycho is a chronicle of adolescence from ONE that brings his style of super
 life. Mob, a tiny teenager with a terrible haircut is the guy we're looking at, and the very first scene we see is of him
 being exploited by a fake psychic. One of Mob's greatest weaknesses, just like any teenager is his lack of experience with
 people. In a different story Mob might have developed a sad, cynical view of the world, but like in most of ONE's work, the
-people Mob encoters in his daily life tend not to be explicitly antagonistic in nature.
+people Mob encounters in his daily life tend not to be explicitly antagonistic in nature.
 
 Mob is a stoic, stubborn kind of fool in that he refuses to be practical even when the situation demands it. He always
 stubornly follows his own logic int he face of reality, and luckily his powers are enough to pull him through most situations.
