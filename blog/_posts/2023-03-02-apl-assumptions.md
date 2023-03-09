@@ -10,7 +10,7 @@ APL and other array languages are often unfairly judged by developers on the int
 from what most programmers daily use. This attempts to counter some common misconceptions and predisposed ideas about APL
 people like to repeat on any APL related media.
 
-## APL is so unreadable!
+###### APL is so unreadable!
 This often comes from people who have not learned APL, and there is usually a response asking them to read the fucking manual.
 The real problem is that programmers expect every language to be same-ish. Expecting to understand a language without
 learning it is entitled nonsense. Most languages use familiar keywords and operators, and they contain long words everywhere.
@@ -20,7 +20,7 @@ You can even look at genuine criticism of Array languages from informed people
 (like Daniel Sockwell does [here](https://raku-advent.blog/2020/12/01/day-1-why-raku-is-ideal-for-advent-of-code/) and [here](https://www.arraycast.com/episode-4-daniels-email))
 to gauge if you want to learn it. Even that is better than simply dismissing it altogether.
 
-## APL is similar to Regex, APL is an esolang, et al.
+###### APL is similar to Regex, APL is an esolang, et al.
 APL is not designed to experiment with language development ideas, to be hard to program in, or as a joke. It was carefully designed by Ken
 Iverson to be usable as a programming language, and it has gone many evolutions to come to its current matured state.
 Many people like to say that APL is ideal for golf and horrible for production. This has been proven wrong in practice time and
