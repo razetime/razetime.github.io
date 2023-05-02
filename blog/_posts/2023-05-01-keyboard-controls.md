@@ -5,7 +5,9 @@ type: computer
 ---
 
 Keyboard controls vastly vary with every video game, but they often have the same homogeneous interfaces that let the user customize
-them. I find it to be a pain that games from 2000 and 2023 both sport basically the same design for these interfaces as well.
+them.
+
+I find it to be a pain that games from 2000 and 2023 both sport basically the same design for these interfaces as well.
 
 ![Deus Ex keyboard controls](../../../../img/deusexkeys.png)
 
