@@ -21,3 +21,8 @@ blockquote {
 blockquote, dl, figure, form, ol, p, pre, table, ul {
   margin-bottom: 1.5rem;
 }
+
+img  {
+  max-width: 100%;
+  box-sizing: border-box; 
+}
