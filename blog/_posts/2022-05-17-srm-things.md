@@ -4,19 +4,22 @@ layout: post
 type: edu
 ---
 
-A few tips if you're joining SRM VDP.
+Many, many tips if you're joining SRM VDP.
 
 - SRM VDP is a depressing place. If you have the ability to choose, choose a bigger campus. Or a 
   different college.
-- Many people prefer to ditch the hostel for a different accomodation. I do know the food is not good
+- Many people prefer to ditch the hostel for a different accomodation. I do know the food is not amazing
   in the hostel, among other things.
 - SRM has full college WiFi and you can get it for all your devices at the ERP area of the college.
   It is often spotty, but it's usually faster than mobile data.
 - The lab is open all day, and if there's no class in it, you can just walk into a lab and use
-  the systems there. The first lab on the first floor is the only good one.
+  the systems there. The first lab on the first floor is the only good, up-to-date one, since it is used for important exams.
 - All students have a lab username in SRM. Your username is your roll no. and your password is 
   "student", usually. You can have private sessions and store things on SRM's resources in 
   these accounts.
+- SRM Library provides academic services including paper lookup and plagiarism check that you would otherwise need to pay
+  for. You can also rent out previous year papers and projects in SRM, and you should take every liberty to do so when you need
+  a reference. The library is much more varied and up-to-date on the online side.
 - Laptops are allowed in class and some teachers do not care as long as you say you are taking notes.
 - Be nice to your lecturers. They are also overworked, and they need some cooperation. The nicer you
   are to your lecturers, the nicer they will be on your exams. This also applies to research
@@ -24,8 +27,9 @@ A few tips if you're joining SRM VDP.
 - Get every single teacher's phone number ASAP, every single semester. You need all of them.
 - Once you have the numbers you can ask quick doubts over phone. Most teachers are more than willing 
   to explain their subject over and over.
-- Get your records done quickly. They're always due right before CT-3/Finals, and you don't want to 
+- Get your records done early. They're always due right before CT-3/Finals, and you don't want to 
   waste hours waiting for stamping and signatures when you should be studying.
+- SRM staff love paper. If you want something checked or approved, **get it on paper.** Print it, write it, whatever.
 - Pester your teachers for question banks, and make sure they are medium-sized or small. 
 - Printing facilities are available at SRM. You can go to the finance dept (ground floor in my time)
   and get a ticket for how many ever pages you need.
