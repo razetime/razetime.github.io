@@ -4,38 +4,28 @@ layout: page
 permalink: projects/
 ---
 
-This page is a list of my solo projects. For a comprehensive list, see [Github](https://github.com/razetime).
-<div class="row">
-  <div class="six columns" markdown="1">
+This is a condensed list for personal bookkeeping. A better one is at [GitHub](https://github.com/razetime/).
 
-###### Docs/Learning Material
-  - [Nial Website](https://nial-array-language.org)
-  - [K Wiki](https://k.miraheze.org/wiki/Main_Page)
-  - [Efficient Array Programming](https://github.com/razetime/efficient-array-programming)
-  - [ngn/k tutorial](https://github.com/razetime/ngn-k-tutorial)
+Projects with an asterisk require more work.
 
-###### Others
-  - [userscripts](https://github.com/razetime/userscripts)
+**Docs/Learning Material**
 
-  </div>
-  <div class="six columns" markdown="1">
+[Nial](https://nial-array-language.org), [K Wiki](https://k.miraheze.org/wiki/Main_Page),
+[Efficient Array Programming](https://github.com/razetime/efficient-array-programming),
+[ngn/k tutorial](https://github.com/razetime/ngn-k-tutorial)*
 
-###### Highlighters, Plugins 
-  - [k-akoune](https://github.com/razetime/k-akoune)
-  - [bqn-vscode](https://github.com/razetime/bqn-vscode)
-  - [rouge Nial](https://github.com/razetime/rouge)
-  - [highlightjs-bqn](https://github.com/razetime/highlightjs-bqn)
-  - [tree-sitter-factor](https://github.com/razetime/tree-sitter-factor)
+**Language Tools**
 
-###### Recreation
-  - [Limn](https://github.com/razetime/Limn)
-  - [Zirconium](https://github.com/razetime/Zirconium)*
-  - [knight-apl](https://github.com/razetime/knight-apl)
-  - [graphical](https://github.com/razetime/graphical-bf)
-  - [Interpreters](https://git.osmarks.net/razetime/esolangs)
-  - [random](https://github.com/razetime/random-rec)
-  - [APLgolf](https://razetime.github.io/APLgolf/)
-  - [aoc](https://github.com/razetime/aoc)
-  - [code-golf](https://github.com/razetime/code-golf)
+[k-akoune](https://github.com/razetime/k-akoune), [bqn-vscode](https://github.com/razetime/bqn-vscode), [highlightjs-bqn](https://github.com/razetime/highlightjs-bqn)
+
+**Esolangs, Code Golf, Others**
+
+Self-designed Esolang: [Limn](https://github.com/razetime/Limn)
+
+Implementations: [Zirconium](https://github.com/razetime/Zirconium), [knight-apl](https://github.com/razetime/knight-apl),
+[graphical-bf](https://github.com/razetime/graphical-bf), [Interpreters](https://git.osmarks.net/razetime/esolangs)
+
+Golf and Challenges: [APLgolf](https://razetime.github.io/APLgolf/), [aoc](https://github.com/razetime/aoc),
+[code-golf](https://github.com/razetime/code-golf), [random](https://github.com/razetime/random-rec), [code guessing](https://github.com/razetime/code-guessing)
   </div>
 </div>
