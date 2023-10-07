@@ -27,5 +27,4 @@ Implementations: [Zirconium](https://github.com/razetime/Zirconium), [knight-apl
 
 Golf and Challenges: [APLgolf](https://razetime.github.io/APLgolf/), [aoc](https://github.com/razetime/aoc),
 [code-golf](https://github.com/razetime/code-golf), [random](https://github.com/razetime/random-rec), [code guessing](https://github.com/razetime/code-guessing)
-  </div>
-</div>
+
