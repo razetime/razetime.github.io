@@ -1,5 +1,5 @@
 ---
-title: Z orderings in BQN
+title: Exploring Z-order in BQN
 layout: post
 type: code
 ---
