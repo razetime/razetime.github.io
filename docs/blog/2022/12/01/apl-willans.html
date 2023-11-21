@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Willans' Formula in APL</title>
+
+  <link rel="alternate" type="application/atom+xml" title="Razetime" href="/feed.xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fenix&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+  />
+  <link rel="stylesheet" href="/style.css" />
+  
+    <link rel="stylesheet" href="/theme.css" />
+  
+</head>
+<body>
+  
+  <div class="container"><br>
+    <a href="/" style="padding-right: 0.5em;">← Home</a>
+    <a href="/blog">← Back to Blog</a>
+    <br><h2>Willans' Formula in APL</h2><p>I saw this video from Eric Rowland a few days back, about an exact mathematical formula to derive the nth prime.</p>
+
+<iframe width="560" height="315" src="https://yewtu.be/embed/j5s0h42GfvM" title="yewtube player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<blockquote>
+  <p>13:21: It shows that you can use basic arithmetic functions in a programming language
+<br />
+13:25: and that that programming language is expressive enough to describe the nth prime number.</p>
+</blockquote>
+
+<p>This quote instantly reminded me of APL, so I obviously had to try implementing it.</p>
+
+<pre><code class="language-apl">Willans←{1++/⌊(÷⍵)*⍨⍵÷{+/{⌊×⍨2○○⍵÷⍨1+!⍵-1}⍳⍵}¨⍳2*⍵}
+</code></pre>
+
+<p>The obvious takeaway from this video is that this is effectively a toy formula that uses several tricks to achieve a “closed
+form”.
+I was still very curious about it since it did resemble an APLesque function:</p>
+<ul>
+  <li>no conditionals</li>
+  <li>a good amount of vectorized math</li>
+  <li>a little bit of overcomputation, as a treat</li>
+</ul>
+
+<p>Actually, there’s too much overcomputation.</p>
+<pre><code class="language-apl">      a←⍳6
+      cmpx 'Willans¨a' 'pco¨a'
+  Willans¨a → 3.1E¯4 |   0% ⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕
+  pco¨a     → 1.1E¯4 | -65% ⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕
+</code></pre>
+
+<p>It fails above <code class="language-plaintext highlighter-rouge">⍵=6</code> due to hitting the integer limit (factorials, yay!), but it’s a nice thing to learn APL’s basic ideas from.
+One can use bignum support like the Python and Mathematica shown in the video, but I don’t recommend it.</p>
+</div>
+</body>
+</html>

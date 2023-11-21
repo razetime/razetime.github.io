@@ -1,0 +1,28 @@
+
+
+html, body {
+  height: 100%;
+  font-family: "Fenix", serif;
+  font-size: 1.1em;
+  background: #000729;
+  color: #e3e3e3;
+
+}
+
+pre, code {
+  background-color: rgb(4, 0, 22);
+  border: none;
+}
+blockquote {
+  border-left: 2px solid #5e5e5e;
+  padding-left: 10px;
+}
+
+blockquote, dl, figure, form, ol, p, pre, table, ul {
+  margin-bottom: 1.5rem;
+}
+
+img  {
+  max-width: 100%;
+  box-sizing: border-box; 
+}
