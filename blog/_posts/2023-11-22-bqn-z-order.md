@@ -1,4 +1,3 @@
-
 ---
 title: Z orderings in BQN
 layout: post
