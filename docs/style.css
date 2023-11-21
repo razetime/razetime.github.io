@@ -26,3 +26,17 @@ img  {
   max-width: 100%;
   box-sizing: border-box; 
 }
+
+.code, .codeCover {
+	fill: #e3e7e7;
+	stroke: #bdcac4;
+}
+
+.Paren, a.Paren {
+	color: #585f5b;
+}
+
+.red {
+	fill: #ce8379;
+	stroke: #861d17;
+}
