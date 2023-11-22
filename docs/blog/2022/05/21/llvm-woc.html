@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | What I learned in IIIT Kalyani's Winter of Code (LLVM Project)</title>
+
+  <link rel="alternate" type="application/atom+xml" title="Razetime" href="/feed.xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fenix&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+  />
+  <link rel="stylesheet" href="/style.css" />
+  
+</head>
+<body>
+  
+  <div class="container"><br>
+    <a href="/" style="padding-right: 0.5em;">← Home</a>
+    <a href="/blog">← Back to Blog</a>
+    <br><h2>What I learned in IIIT Kalyani's Winter of Code (LLVM Project)</h2><p>Thanks to my friend <a href="https://akshitadixit.github.io/">plastic</a>, I decided to enroll in an open source program
+called Winter of Code. I was in for a thorough beating.</p>
+
+<p><a href="https://gdsc-woc.tech/">GDSC IIIT Kalyani’s Winter of Code</a> (WOC) started in around November. Most communication on it happens
+through Discord, and some happened through mail, mostly via Devfolio.
+I would have preferred more mail updates, and I would have also preferred tighter
+scheduling. WOC begins similar to Summer of Code, where you are given three slots for proposals, and a 
+proposal format. I was quite worried about how I’d do in this stage, but if you have done any related writing/open source work
+before, this part is quite easy and chill. A good thing that WOC staff do is to make sure that you contact your mentors early.
+In the case of WOC, some mentors are also students, and this makes for much better conversation sometimes. Basically, 
+contact your mentors early, and keep in touch with them. They are your best friend in this kind of program.
+I have to endorse my mentor, <a href="https://github.com/NimishMishra">Nimish Mishra</a> for being very patient, prompt and helpful
+throughout the project timeline. I would’ve made little progress without his help.</p>
+
+<p>The open source organization I wanted to target was the LLVM backend. My proposal was a loose, overoptimistic project about
+adding features and fixing bugs in the LLVM project.
+<a href="https://docs.google.com/document/d/1oYlmuBohbZYsDE_3Ajp70blvm73SH5tryUoljzACAQs/edit?usp=sharing">You can see it here.</a>
+The most important thing you can learn from this proposal is that I finished none of the things I wrote in it. There were many
+problems:</p>
+<ul>
+  <li>This is a freeform project. This means you have to find your own issues and present them. Your mentor will not do the choosing
+for you. A good thing in some ways, but most importantly a very easy way to shoot yourself in the foot.</li>
+  <li>LLVM is <em>enormous</em>. Being specific helps a lot, and choosing something that your mentor understands is usually more practical.
+I decided to work on a backend issue relating to <code class="language-plaintext highlighter-rouge">opt</code> in the end, and both me and my mentor needed to do a lot of learning 
+in order to make it work.</li>
+  <li>Have a schedule in your proposal no matter how rudimentary. Finding motivation is difficult in open source, and keeping
+yourself accountable is much easier with a schedule.</li>
+</ul>
+
+<p>Once that period was over, the learning and coding phase began. The issue I chose to tackle was
+<a href="https://github.com/llvm/llvm-project/issues/50308#issuecomment-1007952551">this one.</a>. It’s still open, so you can already 
+guess how it went. Mainly for this reason, choose something your mentor(s) have experience in. It makes contributing much 
+easier, and it makes learning much faster. I was given the chance, but I wanted to work on a hard issue (so much for knowing 
+your limits). I went ahead and took a few weeks to get in touch with LLVM, reading tons of pages, understanding the IR, going
+around the chatrooms, so on. Learning about LLVM is endless. You can read the docs and code for months together and still have
+no idea about 90% of the project.</p>
+
+<p>When I began coding, the first road bump was building LLVM. Just building LLVM has multiple pages dedicated to it. Most 
+regular contributors to the project seem to have a VPS or similar thing that they can SSH into in order to test their builds.
+I did not
+have that luxury, so I just had to run the build on my 8GB of RAM. This did not go well. My unfamiliarity with build systems was
+quite the problem here. Luckily with my mentor’s help, I managed to get it to build only the things I needed instead of
+crashing my PC. The average LLVM build on 8GB RAM, forced to a single core (even without subprojects) takes more than an hour.
+Even on decent hardware like mine, this meant
+that simply testing even a single line change takes most of the day. There’s a lot of good ways to debug in LLVM, but few good
+ways to save your time on building.</p>
+
+<p>The actual development side is a different struggle. Finding the necessary file is difficult, but actually not very hard. It is
+much easier when you ask around on the IRC (thanks LebedevRI) and your mentor. Since this was a “beginner” issue, most of the
+work was supposed to be in one file. I went on multiple tangents, but the actual work was supposed to be done in 
+<code class="language-plaintext highlighter-rouge">LoopIdiomRecognize.cpp</code> or one of its henders. There’s an entire article that is dedicated to doing development in LLVM that
+illustrates basic objects, macros and other helpful things, and it still isn’t very easy to understand the codebase. There’s tons
+and tons of global variable mutation, things which reference other headers, and some of the most cursed dependency graphs I’ve
+ever seen. The dependency graphs generated from this codebase could be, with little modification, turned into Elden Ring
+bosses.</p>
+
+<p>One way to simplify working with this was using C++ devtools. I used vscode extension for a little while, only to realize that
+now, I had to worry about the language server eating RAM. Either the build crashes your PC or the devtools crash your PC. That
+being said, the extension is <em>still</em> a godsend. Just make sure you don’t look up a name with too many references.</p>
+
+<p>By the end of WOC, I managed to submit a very wrong patch to LLVM’s phabricator, and then I learned that it was emitting
+malformed IR. That was about all the progress I had managed to make. I tried a few other things before the final report 
+deadline, but I was unable to get at any proper solution that would result in correct IR without sacrificing the performance of
+the LoopIdiomRecognize pass.</p>
+
+<p>The great part about Winter of Code is that it is low-stakes. Trying and failing is encouraged, and they incentivize learning
+alongside progress. I did learn many things, and most of those many things I did not expect to learn. It was mildly fun and
+mildly painful, and quite a good experience overall. Even though my project was not a success in any way, it was a harsh yet
+necessary awakening to how bigger projects tend to be in real life. It also gave me a new hatred for LLVM and C++, and I guess
+that is overall a good thing.</p>
+</div>
+</body>
+</html>

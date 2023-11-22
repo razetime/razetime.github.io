@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Some balanced binary trees in APL</title>
+
+  <link rel="alternate" type="application/atom+xml" title="Razetime" href="/feed.xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fenix&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+  />
+  <link rel="stylesheet" href="/style.css" />
+  
+    <link rel="stylesheet" href="/theme.css" />
+  
+</head>
+<body>
+  
+  <div class="container"><br>
+    <a href="/" style="padding-right: 0.5em;">← Home</a>
+    <a href="/blog">← Back to Blog</a>
+    <br><h2>Some balanced binary trees in APL</h2><p>A few articles have been written on basic tree wrangling in APL. Here I try to aggregate them and use them for balanced binary
+trees. In general I do not recommend working with trees in APL, but if push comes to shove you can use this, or mess with
+Dyalog’s .NET integration for a reference-based version.</p>
+
+<p>Let’s take the following tree as example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>27 (1)
++ - 14 (2)
+|   + - 10 (3)
+|   |   + - 3 (4)
+|   + - 19 (5)
++ - 35 (6)
+    + - 31 (7)
+    + - 42 (8)
+</code></pre></div></div>
+<h4 id="bst-binary-search-tree">BST (Binary Search Tree)</h4>
+
+<p><strong><a href="https://www.youtube.com/watch?v=hzPd3umu78g">Aaron Hsu repr</a>:</strong></p>
+
+<p>Let’s call this AH.</p>
+
+<p>Uses a parent vector, left sibling, data vectors.</p>
+
+<p>We use position here rather than node to the left because position matters in a binary search tree.</p>
+<pre><code class="language-apl">ap←1  1  2  3 2  1  6  6 ⍝ parent nodes
+al←1  1  1  1 2  1  1  1 ⍝ position (left=1/right=2)
+ad←27 14 10 3 19 35 31 42 ⍝ data
+</code></pre>
+
+<p><strong><a href="https://github.com/JohnEarnest/ok/blob/gh-pages/docs/Trees.md">John Earnest’s pair-based repr</a>:</strong></p>
+
+<p>Let’s call this JE. The second version explored on the page is very similar to Aaron Hsu’s idea.</p>
+
+<pre><code class="language-apl">jt←↑(2 6) (3 5) (4 0) (0 0) (0 0) (7 8) (0 0) (0 0) ⍝ child nodes
+jd← 27    14    10    3     19    35    31    42    ⍝ data
+</code></pre>
+
+<h5 id="searching-and-insertion">Searching and Insertion</h5>
+
+<p>Effectively a binary search which is arguably better done by sorting the data array and using interval index. However, it is not
+too complex to do a search on both tree representations:</p>
+
+<p>For the JE repr, since the number of nodes is part of the structure, it is somewhat simple to modify the data:</p>
+<pre><code class="language-apl">FindJE ← {
+  (t d)←⍺
+  s←⍵
+  1∘{x←⍺⊃d ⋄ n←(1+⍵&gt;x)⊃⍺⌷t ⋄ (⍵=x)∨0=n:⍺ ⋄ n∇⍵}s
+}
+InsertJE ← {
+  (t d)←⍺
+  s←⍵
+  v←⍺ FindJE ⍵
+  t←{(1+≢d)@(⊂v(1+s&gt;v⊃d))⊢⍵}⍣(0≠≢d)⊢t⍪1
+  t (d,⍵)
+}
+</code></pre>
+
+<p>For AH, I found it much simpler to use a recursive function to find a required node.</p>
+<pre><code class="language-apl">FindAH ← {
+  (p l d)←⍺ ⍝ full tree
+  s←⍵ ⍝ 
+  1∘{x←⍺⊃d ⋄ (⍵=x)∨~(1+⍵&gt;x)∊(⍺=p)/l:⍺ ⋄ ((1+⍵&gt;x)⊃1~⍨⍸⍺=p)∇⍵}s
+}
+InsertAH ← {
+  (p l d)←⍺
+  ⎕←v←⍺ FindAH ⍵
+  (p,v) (l,1+⍵&gt;v⊃d) (d,⍵)
+}
+</code></pre>
+
+<h4 id="avl-trees">AVL trees</h4>
+
+<p>Here we will be using Aaron Hsu’s repr only, for an AVL tree, we can track depths of each vertex:</p>
+<pre><code class="language-apl">d ←  27    14    10    19    35    31    42
+dp ← 1     2     3     3     2     3     3
+</code></pre>
+
+<h5 id="rotation">Rotation</h5>
+
+<p>The steps for left rotation about a given node are:</p>
+
+<!--
+T1, T2 and T3 are subtrees of the tree, rooted with y (on the left side) or x (on the right side)     
+      
+     y                               x
+    / \     Right Rotation          /  \
+   x   T3   - - - - - - - >        T1   y 
+  / \       < - - - - - - -            / \
+ T1  T2     Left Rotation            T2  T3
+-->
+
+<p>so, going by this, we can define a right rotation for AH about a node given by index <code class="language-plaintext highlighter-rouge">y</code> as follows:</p>
+<ol>
+  <li>x and y swap parents</li>
+  <li>x gets y’s position (left or right)</li>
+  <li>T2 becomes left node of y.</li>
+  <li>update heights of y and x.</li>
+</ol>
+
+<p>Here, we don’t need to change anything except for the parent and height of each node.</p>
+
+<pre><code class="language-apl">RRotAH ← {
+  (p l d h)←⍺
+  y←⍵
+  x←⊃⍸(l=1)∧p=y
+  p[x]←p[y]          ⍝ Step 1
+  p[y]←x
+  l[x]←l[y] ⋄ l[y]←2 ⍝ Step 2
+  t2←⊃⍸(l=2)∧p=x
+  p[t2]←y ⋄ l[t2]←1  ⍝ Step 3
+  h[y]←1+⌈/h[⍸p=y]   ⍝ always update y first, it is the child node.
+  h[x]←1+⌈/h[⍸p=x]   ⍝ Step 4
+  p l d h 
+}
+</code></pre>
+
+<p>A similar technique can be used for a left rotation:</p>
+<pre><code class="language-apl">LRotAH ← {
+  (p l d h)←⍺
+  x←⍵
+  ⎕←'y: ',y←⊃⍸(l=2)∧p=x
+  t2←⊃⍸(l=1)∧p=y
+  p[y]←p[x]          ⍝ Step 1
+  p[x]←y
+  l[y]←l[x] ⋄ l[x]←1 ⍝ Step 2
+  p[t2]←x ⋄ l[t2]←2  ⍝ Step 3
+  h[x]←1+⌈/h[⍸p=x]   ⍝ always update y first, it is the child node.
+  h[y]←1+⌈/h[⍸p=y]   ⍝ Step 4
+  p l d h 
+}
+</code></pre>
+
+<p>Finally, we can insert stuff in the tree with the existing BST insertion, and these rotations. There’s four cases listed at
+<a href="https://www.geeksforgeeks.org/avl-tree-set-1-insertion/">geeksforgeeks</a>, which are somewhat simple to handle with indexing.</p>
+
+<p>Code for these is available in <a href="https://gist.github.com/razetime/b3c1a11fe5ecb030bacd6a0780575f91">this gist.</a></p>
+</div>
+</body>
+</html>

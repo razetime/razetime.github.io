@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Mercury Notes</title>
+
+  <link rel="alternate" type="application/atom+xml" title="Razetime" href="/feed.xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fenix&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+  />
+  <link rel="stylesheet" href="/style.css" />
+  
+    <link rel="stylesheet" href="/theme.css" />
+  
+</head>
+<body>
+  
+  <div class="container"><br>
+    <a href="/" style="padding-right: 0.5em;">← Home</a>
+    <a href="/blog">← Back to Blog</a>
+    <br><h2>Mercury Notes</h2><p>There’s a lot of specifics in the Mercury language distribution that pop up often and waste a lot of time. I try to document
+them here. This page will be updated as I get better at Mercury.</p>
+
+<h5 id="basic-scripting">Basic Scripting</h5>
+<ul>
+  <li>A great, descriptive crash course is at <a href="https://mercury-in.space/crash.html">mercury-in.space</a> and you should read it before 
+anything.</li>
+  <li>Always use <code class="language-plaintext highlighter-rouge">mmc --make</code> to build stuff. It clutters less and automatically builds modules.</li>
+  <li>For pattern patching a fixed size list, use TUPLES <code class="language-plaintext highlighter-rouge">{}</code></li>
+  <li>Doing <code class="language-plaintext highlighter-rouge">Y=string(X),error(Y)</code> is good for inspecting a value without passing in !IO everywhere.</li>
+  <li>Most predicates that are common use have a <code class="language-plaintext highlighter-rouge">det</code> version so you don’t have to if-else and writhe in pain</li>
+  <li>Use looser determinism for predicates you are unsure of. The compiler will suggest a better determinism and you can change it
+later.</li>
+</ul>
+
+<h5 id="debugging">Debugging</h5>
+<ul>
+  <li>use rlwrap with the debugger. You’ll need it.</li>
+  <li><code class="language-plaintext highlighter-rouge">mmc --output-stdlib-grades</code> gets you the list of grades you can use to build, use one with <code class="language-plaintext highlighter-rouge">debug</code> in it.</li>
+  <li>you will probably need <code class="language-plaintext highlighter-rouge">--rebuild</code> as well since a debug build needs different object files.</li>
+  <li>outside the basic primitives outlined
+<a href="https://mercurylang.org/information/doc-release/mercury_user_guide/Quick-overview.html#Quick-overview">here</a>, you 
+<em>definitely</em> will need <code class="language-plaintext highlighter-rouge">browse</code> to inspect data properly.</li>
+</ul>
+
+<h5 id="file-io">File I/O</h5>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">read_named_file_as_lines("file",I,!IO),</code>, reads lines to <code class="language-plaintext highlighter-rouge">I</code>. Similar predicates are very simple, provide <code class="language-plaintext highlighter-rouge">ok</code>/<code class="language-plaintext highlighter-rouge">error</code></li>
+</ul>
+
+<h5 id="lists">Lists</h5>
+<ul>
+  <li>use <code class="language-plaintext highlighter-rouge">filter_map</code> instead of map whenever you need to use a nondeterministic predicate that will always return a result for
+your purposes. It also comes with the upside of keeping your outer predicate <code class="language-plaintext highlighter-rouge">det</code>.</li>
+  <li><code class="language-plaintext highlighter-rouge">map_foldl</code> is a like scanl but more generalist in some ways. If you return rhe same output for both you get a scan.</li>
+  <li><code class="language-plaintext highlighter-rouge">foldl</code> gets confused with <code class="language-plaintext highlighter-rouge">string.foldl</code> and it gives an overloading error that is.. difficult to figure out</li>
+  <li>All the folds have the predicate argument take args in a flipped manner (Next,Prev,Out)
+    <ul>
+      <li>this is for the sake of the !Var pattern</li>
+    </ul>
+  </li>
+</ul>
+
+<h5 id="strings">Strings</h5>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">to_char_list</code> for getting chars</li>
+  <li>is there a way to get a list of chars easily?</li>
+</ul>
+
+<h5 id="dcgs">DCGs</h5>
+<ul>
+  <li>They are present as ordinary predicates.</li>
+  <li><code class="language-plaintext highlighter-rouge">phrase/2</code> and <code class="language-plaintext highlighter-rouge">phrase/3</code> do not exist.</li>
+  <li>They work on arbitrary sequences of characters</li>
+  <li>Given <code class="language-plaintext highlighter-rouge">prod(...) --&gt; stuff</code>
+    <ul>
+      <li>Signature is <code class="language-plaintext highlighter-rouge">:- pred prod(...,Input,Output)</code>
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">...</code> are the arguments to your production.</li>
+          <li><code class="language-plaintext highlighter-rouge">Input</code> is the string that is being matched by the DCG</li>
+          <li><code class="language-plaintext highlighter-rouge">Output</code> are the tokens remaining after a match. Set to `[]</li>
+          <li><code class="language-plaintext highlighter-rouge">Input::in, Output::out</code> if you are parsing with the DCG and not generating</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Avoid putting multiple conditions in a DCG, it’s much better to factor them out into multiple different productions</li>
+</ul>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | AOC 2021 in BQN</title>
+
+  <link rel="alternate" type="application/atom+xml" title="Razetime" href="/feed.xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fenix&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+  />
+  <link rel="stylesheet" href="/style.css" />
+  
+    <link rel="stylesheet" href="/theme.css" />
+  
+</head>
+<body>
+  
+  <div class="container"><br>
+    <a href="/" style="padding-right: 0.5em;">← Home</a>
+    <a href="/blog">← Back to Blog</a>
+    <br><h2>AOC 2021 in BQN</h2><p>Advent of Code in BQN was a fun experience. These are a few short notes about how I solved each of the problems, and how BQN fared with each of them.</p>
+
+<p>BQN’s a cool new array language I picked up along with a bunch others on my journey to have shallow knowledge on every language in existence. Luckily, I was thwarted by how genuinely good the language was, and managed to make decent progress on learning. It had luckily come up in the time when my interest in using array languages(or any languages, for that matter), was waning. Advent of Code (AOC) luckily came along when i was learning, and here we are. My experience in array languages is quite new(barely 2 years), and my experience with solving programming problems(real-world or recreational) is even more limited, so if I do say something dumb here, please take it with a grain of salt.</p>
+
+<p>BQN calls itself “an APL for your flying saucer”, but actually attempts a balancing act between an an array language and a modern scripting language, attempting to bridge the two while adding some nice new concepts to the mix (yay, character arithmetic!). My previous AOC was quite the disaster with APL+Ruby, and I’d improved since then at approaching problems and solving them myself. My final solutions are at https://github.com/razetime/AOC2021-BQN/. It has day 23 and 24 missing, since I did not finish them in time, and I do not have much time now to complete them. The following article will attempt to describe my thought process and approach toward the problems in BQN, how it helped me, and how it did not help me. In future years I’ll be writing these as the challenges come up, so they will be more accurate and insightful.</p>
+
+<ol>
+  <li>Not much to say here. Very array oriented problem.</li>
+  <li>The first problem here is getting BQN data from the input. Splitting is a BQNcrate idiom, getting integers is relatively convenient via <code class="language-plaintext highlighter-rouge">•BQN</code>, but having a <code class="language-plaintext highlighter-rouge">•ToInt</code> or <code class="language-plaintext highlighter-rouge">•Numbers.ToInt</code> as a system value would’ve been better. Later I learned about the <a href="https://github.com/mlochbaum/bqn-libs/blob/master/strings.bqn#L135">number getting functions in bqn-libs</a>. I suppose those will get in the official implementations sometime. This problem lent itself to a really easy imperative approach, but i abandoned that idea and went with arrays. I have to mention that having good array notation is nice here.</li>
+  <li>I created a library file on this day. I took forever to create it due to the joy of OS-specific line endings. Otherwise, the challenge itself was quite simple. Found a use for Atop, and <code class="language-plaintext highlighter-rouge">_while_</code> is super useful. while was later added to the CBQN system values by dzaima, and it’s been used in many days since.</li>
+  <li>Had to create a split function this day. It’s used enough in general, even outside of AOC, that Split should make it into a system library. I have come around to agreeing with ndrogers here. I have to attribute some part of this challenge completion to BQN’s speed because i was recomputing each board every single iteration. I realized too late that diagonals didn’t matter. <code class="language-plaintext highlighter-rouge">•BQN "⟩"∾˜"⟨"∾</code> is a convenient thing.</li>
+  <li>Initially went for plotting the points with Under, but realized later that repeated indices do not cause repeated application(<code class="language-plaintext highlighter-rouge">1⊸+⌾(1‿1‿1‿1⊸⊏) 1‿2</code> is <code class="language-plaintext highlighter-rouge">1‿3</code>). In hindsight it was obvious, and modification might’ve worked there. The final idea was grouping all the two element arrays and counting their occurrences, which worked well. Doing it without sorting was <em>extremely</em> slow, and so was a monadic call of <code class="language-plaintext highlighter-rouge">⊔</code>.</li>
+  <li>Easy pickings for under. Much more difficult for me to realize the second part was a bin related thing.</li>
+  <li>Heavy lifting from <code class="language-plaintext highlighter-rouge">⌜</code>(Table)</li>
+  <li>Part 1 had a nice use for <code class="language-plaintext highlighter-rouge">¯1⊑</code>. A cute boolean array problem for part 2. My approach was convoluted but it worked.</li>
+  <li>In part 1 I’m sure <code class="language-plaintext highlighter-rouge">{∧´(4⊸⊑&lt;1‿3‿5‿7⊸⊏)⥊𝕩}¨&lt;⎉2</code> can be changed to remove the each. <code class="language-plaintext highlighter-rouge">↕</code> is great here. Part 2 was misleading. Named arguments come to the rescue (<code class="language-plaintext highlighter-rouge">coord</code>). otherwise it’s just a recursive floodfill that uses two element arrays to represent points.</li>
+  <li>A simple, clean stack machine reduction which comes out neatly since the predicates do not need to share variables. <code class="language-plaintext highlighter-rouge">f⊸/</code> also makes an appearance here. Great stuff for filtering.</li>
+  <li>Padding makes a second appearance here. Multiple repeats also make an appearance here, which is very convenient.</li>
+  <li>My weakness with recursive algorithms starts from here. The program is a graph search with some egregious code duplication in <code class="language-plaintext highlighter-rouge">+´{(w∾('a'≤⊑x)⥊⋈x) Find 𝕩}¨</code> which I didn’t find an elegant way to get around. Named headers are great here, and the immediate block doesn’t really hurt the readability here at the end, but however, it did get in the way of writing a solution quickly. Maybe a header symbol for identifying an immediate block would help (double struck <code class="language-plaintext highlighter-rouge">𝕀</code>, maybe?)</li>
+  <li>First class functions are nice here for parsing and readability. <code class="language-plaintext highlighter-rouge">⊔</code> is also great here, although i’m not sure why i wasn’t able to just use <code class="language-plaintext highlighter-rouge">↑</code> to do the entire job. Very cute problem which works well in BQN.</li>
+  <li>Nothing really stands out here, a simple memoization problem. matrix exponentiation is much cooler to solve this with.</li>
+  <li>I am not good at implementing dijsktra or A* or any of the other algorithms. What I ended up using was an inefficient Bellman-Ford, which wasn’t enough for part 2, which I stole from ngn. frasiyav however managed to make a better one, and it’s astonishingly concise. Mental reminder to read and understand that sometime.</li>
+  <li>Textbook application for just about every type of header overload.</li>
+  <li>This was terribly slow from what i remember.</li>
+  <li>Uses higher order functions which are <em>not</em> modifiers. rest of it is just traversing a ragged array and messing with it. The hardest part wasn’t even debugging the recursive functions, it was figuring out the conditions for the one line <code class="language-plaintext highlighter-rouge">Add ← { Split⍟((¬Exb 𝕩)⊸∧Spb) Explode⍟Exb 𝕩} •_while_ (Exb∨Spb) ⋈</code> .</li>
+  <li>Probably the most satisying to solve AOC, and it was one of the harder ones. print debugging worked quite well.</li>
+  <li></li>
+  <li>nice use for dynamic reshape (<code class="language-plaintext highlighter-rouge">∘‿2⥊</code>).</li>
+  <li>part 2 lopsidedly harder than part 1. Part 2 I copied from a reddit thread, but looks deceptively arrayifiable. Still looks quite neat and clean with the predicates. Shame that there’s so many <code class="language-plaintext highlighter-rouge">@</code>s though.</li>
+  <li>Bit twiddling which would work well in any array language. I tried using the BQNcrate (recursion depth-avoiding) fixpoint combinator, but it doesn’t give the exact result probably due to the existence of fewer calls or something like that. The number came out right when i just used plain recursion.</li>
+</ol>
+</div>
+</body>
+</html>
