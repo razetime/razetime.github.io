@@ -12,7 +12,7 @@ than I imagined.
 You can see the end result of this 
 [here](https://razetime.github.io/decks/).
 
-Lilt, the command line scripting language for Decker, is quite brilliantly
+Lilt, the command line scripting language for Decker, is beautifully
 integrated with the Decker file format. You can load decks into Lil, modify
 them, and then save them in both `.deck` and `.html` format. This make every
 deck usable as a template file, so you can make any custom drawings and 
@@ -70,7 +70,7 @@ each x in l wchk[x readdeck["%s.deck" format x]] end
 There's many things one can do with this sort of functionality, this is just
 simply a small glimpse of what you can do with deck modification in Lil. There's
 certainly many ways to improve its speed (removing redundant `readdeck` calls),
-and many ways to make it much more modular and responsive. Some basic
+and many ways to make it much more modular. Some basic
 quality-of-life things one can do is use the
 [Deck Interface](https://beyondloom.com/decker/decker.html#deckinterface) to
 lock the index deck, automatically add author details, generate sitemaps and
