@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://razetime.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://razetime.github.io/" rel="alternate" type="text/html" /><updated>2023-11-22T05:11:14+08:00</updated><id>https://razetime.github.io/feed.xml</id><title type="html">Razetime</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Exploring Z-order in BQN</title><link href="https://razetime.github.io/blog/2023/11/22/bqn-z-order.html" rel="alternate" type="text/html" title="Exploring Z-order in BQN" /><published>2023-11-22T00:00:00+08:00</published><updated>2023-11-22T00:00:00+08:00</updated><id>https://razetime.github.io/blog/2023/11/22/bqn-z-order</id><content type="html" xml:base="https://razetime.github.io/blog/2023/11/22/bqn-z-order.html"><![CDATA[<p><em>The code for this article can be found on
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://razetime.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://razetime.github.io/" rel="alternate" type="text/html" /><updated>2023-11-24T12:20:23+08:00</updated><id>https://razetime.github.io/feed.xml</id><title type="html">Razetime</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Exploring Z-order in BQN</title><link href="https://razetime.github.io/blog/2023/11/22/bqn-z-order.html" rel="alternate" type="text/html" title="Exploring Z-order in BQN" /><published>2023-11-22T00:00:00+08:00</published><updated>2023-11-22T00:00:00+08:00</updated><id>https://razetime.github.io/blog/2023/11/22/bqn-z-order</id><content type="html" xml:base="https://razetime.github.io/blog/2023/11/22/bqn-z-order.html"><![CDATA[<p><em>The code for this article can be found on
 <a href="https://github.com/razetime/bqnforklift">Github</a>.</em></p>
 
 <p>In my coursework for spatial databases, we came upon the z-order curve, a
@@ -118,7 +118,82 @@ co-ordinates when necessary.</p>
 <p>I never completely understood why BQN’s bitwise operations only worked on full
 arrays until trying to write this. Even though the bit width is fixed, it helps
 that the same conforming rules work correctly in bqn to make rank polymorphism
-work.</p>]]></content><author><name></name></author><category term="blog" /><summary type="html"><![CDATA[The code for this article can be found on Github.]]></summary></entry><entry><title type="html">Starting out in Fighting games</title><link href="https://razetime.github.io/blog/2023/08/12/beginner-fgs.html" rel="alternate" type="text/html" title="Starting out in Fighting games" /><published>2023-08-12T00:00:00+08:00</published><updated>2023-08-12T00:00:00+08:00</updated><id>https://razetime.github.io/blog/2023/08/12/beginner-fgs</id><content type="html" xml:base="https://razetime.github.io/blog/2023/08/12/beginner-fgs.html"><![CDATA[<p>I’ve been ardently watching fighting games and smash for ages, and I decided one day in September 2022 to try out the genre. After a year of playing them on and off, I still find it hard to justify continuing to play them.</p>
+work.</p>]]></content><author><name></name></author><category term="blog" /><summary type="html"><![CDATA[The code for this article can be found on Github.]]></summary></entry><entry><title type="html">Making a simple Decker-based static site</title><link href="https://razetime.github.io/blog/2023/11/22/decker-sites.html" rel="alternate" type="text/html" title="Making a simple Decker-based static site" /><published>2023-11-22T00:00:00+08:00</published><updated>2023-11-22T00:00:00+08:00</updated><id>https://razetime.github.io/blog/2023/11/22/decker-sites</id><content type="html" xml:base="https://razetime.github.io/blog/2023/11/22/decker-sites.html"><![CDATA[<p><a href="https://beyondloom.com/decker/">Decker</a> is an array programming adjacent,
+hypercard-like multimedia tool that can run on the web. Creating a branching
+static website is hence possible in Decker, and the process is much less tackier
+than I imagined.</p>
+
+<p>You can see the end result of this 
+<a href="https://razetime.github.io/decks/">here</a>.</p>
+
+<p>Lilt, the command line scripting language for Decker, is beautifully
+integrated with the Decker file format. You can load decks into Lil, modify
+them, and then save them in both <code class="language-plaintext highlighter-rouge">.deck</code> and <code class="language-plaintext highlighter-rouge">.html</code> format. This make every
+deck usable as a template file, so you can make any custom drawings and 
+embellishments inside the decker UI, and perform impure, system specific things
+outside the UI, in your script.</p>
+
+<p>For my decks repository, I wanted a single root deck that linked to all the
+other decks I had made. First, the index file is loaded, and we get the files
+that should be linked via linux’s <code class="language-plaintext highlighter-rouge">ls</code>. If you are on a different platform, 
+substitute as necessary.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>i:readdeck["index.deck"]
+l:"index" drop -1 drop ".deck\n" split shell["ls *.deck"].out
+</code></pre></div></div>
+
+<p>I have only one card in my index deck, and it contains one text widget. To
+display links, it needs to be locked. I added scrolling capability to it, to
+make sure that all my deck links will fit correctly.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root:"https://razetime.github.io/decks/%s.html"
+i.card.widgets.list.value:table each x in l
+  ("text","font","arg") dict (("%s\n\n" format readdeck["%s.deck" format x].name),"menu",(root format x))
+end
+</code></pre></div></div>
+
+<p>A <code class="language-plaintext highlighter-rouge">root</code> format string is required since Decker doesn’t recognize relative file
+paths as URLs, which is completely fine.</p>
+
+<p>A text widget takes a table of <code class="language-plaintext highlighter-rouge">text</code>, <code class="language-plaintext highlighter-rouge">font</code> and <code class="language-plaintext highlighter-rouge">arg</code>. Sadly we can’t
+construct this structure from a query, so we have to go through each item and
+assign the URL to <code class="language-plaintext highlighter-rouge">arg</code> for every deck.</p>
+
+<p>I use <code class="language-plaintext highlighter-rouge">readdeck["%s.deck" format x].name</code> even though it is likely to be slower,
+since generating the structure is easier when the title is taken from the child
+deck itself.</p>
+
+<p>Finally, we define a helper that writes a deck to file and tells us whether it
+was successfully converted. <code class="language-plaintext highlighter-rouge">writedeck</code> returns a <code class="language-plaintext highlighter-rouge">0</code> on failure, making this
+very easy.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>on wchk x y do
+  print["%s  %s" format (x,("failure", "success")[writedeck[("docs/%s.html" format x) y]])]
+end
+</code></pre></div></div>
+
+<p>It is then easy with the helper function to write all the finalized decks to
+a folder where you can serve files from. For Github Pages, this is usually
+<code class="language-plaintext highlighter-rouge">docs</code>.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wchk["index" i]
+each x in l wchk[x readdeck["%s.deck" format x]] end
+</code></pre></div></div>
+
+<p>There’s many things one can do with this sort of functionality, this is just
+simply a small glimpse of what you can do with deck modification in Lil. There’s
+certainly many ways to improve its speed (removing redundant <code class="language-plaintext highlighter-rouge">readdeck</code> calls),
+and many ways to make it much more modular. Some basic
+quality-of-life things one can do is use the
+<a href="https://beyondloom.com/decker/decker.html#deckinterface">Deck Interface</a> to
+lock the index deck, automatically add author details, generate sitemaps and
+breadcrumbs, and a lot more.</p>
+
+<p>I’d like to encourage this sort of structure
+for people that want to make and showcase their things with Decker, because it
+is so simple, doesn’t require you to modify Decker in any way, and works well
+even with handmade decks. I hope you find Decker as enjoyable as I do!</p>
+
+<p><em>You can find the code for this article at 
+<a href="https://github.com/razetime/decks/tree/main">GitHub</a>. The main relevant files
+are <code class="language-plaintext highlighter-rouge">gen.lil</code> and <code class="language-plaintext highlighter-rouge">index.deck</code>.</em></p>]]></content><author><name></name></author><category term="blog" /><category term="computer" /><summary type="html"><![CDATA[Decker is an array programming adjacent, hypercard-like multimedia tool that can run on the web. Creating a branching static website is hence possible in Decker, and the process is much less tackier than I imagined.]]></summary></entry><entry><title type="html">Starting out in Fighting games</title><link href="https://razetime.github.io/blog/2023/08/12/beginner-fgs.html" rel="alternate" type="text/html" title="Starting out in Fighting games" /><published>2023-08-12T00:00:00+08:00</published><updated>2023-08-12T00:00:00+08:00</updated><id>https://razetime.github.io/blog/2023/08/12/beginner-fgs</id><content type="html" xml:base="https://razetime.github.io/blog/2023/08/12/beginner-fgs.html"><![CDATA[<p>I’ve been ardently watching fighting games and smash for ages, and I decided one day in September 2022 to try out the genre. After a year of playing them on and off, I still find it hard to justify continuing to play them.</p>
 
 <p>My first fighting game was third strike on fightcade. Later I tried Them’s Fighting Herds, Garou: Mark of the Wolves, Guilty Gear XX Accent Core +R, Undernight In-Birth cl-r, BlazBlue Centralfiction, and most recently, Skullgirls.
 I’ve spent the most time on Third Strike and +R, so that is mostly what my opinions of are based on.</p>
@@ -592,36 +667,4 @@ for it throughout November and December. I hope all of you had a great December,
   <li><a href="https://itch.io/jam/decktember/entries">Decktember submissions</a></li>
   <li><a href="https://github.com/1jss/awesome-decker/issues">Awesome Decker</a></li>
   <li><a href="https://www.arraycast.com/episodes/episode43-john-earnest-decker">John Earnest on the Array Cast, Dec 23</a></li>
-</ul>]]></content><author><name></name></author><category term="blog" /><summary type="html"><![CDATA[This year’s Advent of code language was Lil. I skipped day 16, 19, 22 part 2, 24 and 25.]]></summary></entry><entry><title type="html">Willans’ Formula in APL</title><link href="https://razetime.github.io/blog/2022/12/01/apl-willans.html" rel="alternate" type="text/html" title="Willans’ Formula in APL" /><published>2022-12-01T00:00:00+08:00</published><updated>2022-12-01T00:00:00+08:00</updated><id>https://razetime.github.io/blog/2022/12/01/apl-willans</id><content type="html" xml:base="https://razetime.github.io/blog/2022/12/01/apl-willans.html"><![CDATA[<p>I saw this video from Eric Rowland a few days back, about an exact mathematical formula to derive the nth prime.</p>
-
-<iframe width="560" height="315" src="https://yewtu.be/embed/j5s0h42GfvM" title="yewtube player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-
-<blockquote>
-  <p>13:21: It shows that you can use basic arithmetic functions in a programming language
-<br />
-13:25: and that that programming language is expressive enough to describe the nth prime number.</p>
-</blockquote>
-
-<p>This quote instantly reminded me of APL, so I obviously had to try implementing it.</p>
-
-<pre><code class="language-apl">Willans←{1++/⌊(÷⍵)*⍨⍵÷{+/{⌊×⍨2○○⍵÷⍨1+!⍵-1}⍳⍵}¨⍳2*⍵}
-</code></pre>
-
-<p>The obvious takeaway from this video is that this is effectively a toy formula that uses several tricks to achieve a “closed
-form”.
-I was still very curious about it since it did resemble an APLesque function:</p>
-<ul>
-  <li>no conditionals</li>
-  <li>a good amount of vectorized math</li>
-  <li>a little bit of overcomputation, as a treat</li>
-</ul>
-
-<p>Actually, there’s too much overcomputation.</p>
-<pre><code class="language-apl">      a←⍳6
-      cmpx 'Willans¨a' 'pco¨a'
-  Willans¨a → 3.1E¯4 |   0% ⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕
-  pco¨a     → 1.1E¯4 | -65% ⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕⎕
-</code></pre>
-
-<p>It fails above <code class="language-plaintext highlighter-rouge">⍵=6</code> due to hitting the integer limit (factorials, yay!), but it’s a nice thing to learn APL’s basic ideas from.
-One can use bignum support like the Python and Mathematica shown in the video, but I don’t recommend it.</p>]]></content><author><name></name></author><category term="blog" /><summary type="html"><![CDATA[I saw this video from Eric Rowland a few days back, about an exact mathematical formula to derive the nth prime.]]></summary></entry></feed>
+</ul>]]></content><author><name></name></author><category term="blog" /><summary type="html"><![CDATA[This year’s Advent of code language was Lil. I skipped day 16, 19, 22 part 2, 24 and 25.]]></summary></entry></feed>
