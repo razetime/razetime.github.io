@@ -148,9 +148,9 @@ Base64 ← {
 }
 
 # Various URLs
-siteURL ← "https://mlochbaum.github.io/BQN/"
+siteURL ← "https://razetime.github.io/"
 tryURL  ← siteURL∾"try.html#code="
-repoURL ← "https://github.com/mlochbaum/BQN"
+repoURL ← "https://github.com/razetime/razetime.github.io"
 blobURL ← repoURL∾"/blob/master/"
 
 # Environments
@@ -272,9 +272,9 @@ Markdown ← {filename𝕊𝕩:
       target ← « ea PG⌾⌽ cont         # Top-level assignment targets
       ia ← idInd ⊏ target             # Whether each name is assigned
       # Build the link element
-      lu ← tryURL ∾ Base64 ¯1 ↓ names‿ia‿iline MakeLink parts
-      l ← "a class=""replLink"" title=""Open in the REPL"" target=""_blank"" href="
-      link ← (l∾""""(∾∾⊣)lu) Html "↗️"
+      # lu ← tryURL ∾ Base64 ¯1 ↓ names‿ia‿iline MakeLink parts
+      # l ← "a class=""replLink"" title=""Open in the REPL"" target=""_blank"" href="
+      # link ← (l∾""""(∾∾⊣)lu) Html "↗️"
       ⟨r, /break, link⟩
     ;
       3⥊<⟨⟩
@@ -382,6 +382,10 @@ Markdown ← {filename𝕊𝕩:
     (1¨ <⊸∾ codeMask⊸GetMultiHighlights)⊸Modify 𝕩
   }⟜JoinLines
   ProcHtmlBlock ← extensions◶JoinLines‿(<⟜2◶ProcComment‿ProcHtml)
+  
+  # Thematic Breaks
+  # Can be a p
+  ProcBreak ← ∾("<hr />"∾lf)¨
 
   dig ← '0'+↕10
   [lineChars,lineClas,procFns] ← ⍉[
@@ -392,6 +396,7 @@ Markdown ← {filename𝕊𝕩:
     "-+*" ‿ LenBullet   ‿ ProcBullet
   # dig   ‿ LenListNum  ‿ ProcListNum
     "<"   ‿ IsHtmlBlock ‿ ProcHtmlBlock
+    ""    ‿ 0           ‿ ProcBreak
   ]
 
   ######
@@ -540,6 +545,10 @@ Markdown ← {filename𝕊𝕩:
   # A header can't have 4 spaces of indentation. If it doesn't become
   # part of a code block, it will be included in a paragraph.
   lineType -↩ codeMask ∧ 1 = lineType
+  
+  # Lines that are thematic breaks
+  breakMask ← nonEmptyMask ∧ (blanks ≤ 3) ∧ {(∨´3≤+´˘nw)∧∨´∧´˘(𝕩∊" 	")⊸∨˘nw←"*-_"=⌜𝕩}¨𝕩
+  lineType 6¨⌾(breakMask⊸/)↩
 
   # Tables are made up of rows that would otherwise be paragraph rows.
   # They are indicated by the delimiter row, consisting of only a few
@@ -710,9 +719,9 @@ ConvertFile ← {
   # Contents of file to convert
   md ← •file.Lines 𝕩
   # Verify and remove the html link line: the output *is* the html file.
-  IsView ← "*View this file"⊸MatchStart ∧ (siteURL∾fileout∾").*")⊸MatchEnd
-  ⟨"File ",𝕩," has missing or incorrect view link"⟩ ∾⊸! IsView ⊑md
-  out ← 𝕩 Markdown 2↓md
+  # IsView ← "*View this file"⊸MatchStart ∧ (siteURL∾fileout∾").*")⊸MatchEnd
+  # ⟨"File ",𝕩," has missing or incorrect view link"⟩ ∾⊸! IsView ⊑md
+  out ← 𝕩 Markdown md
 
   parts ← (1-˜·(¬×1++`)'/'⊸=)⊸⊔ (⊑⊐⟜".")⊸↑ 𝕩
   root ← ⊑ up ← ⥊∘/⟜≍⟜"../"¨ ⌽↕≠parts
@@ -720,20 +729,21 @@ ConvertFile ← {
   RQ ← {'"'¨⌾(('''=𝕩)⊸/)𝕩}
   Link ← RQ {∾⟨"<link href='",root,𝕩,"' rel='",𝕨,"'/>"⟩}
   Clean ← "`` ` ``"⊸⍷ ∨´∘⊣◶⟨'`'⊸≠⊸/⊢,≠⊸(1≠`-⊸↑≠↑)˜/⊢⟩ ⊢  # Help pages have backticks in titles
-  h1 ← (2≤≠)◶0‿("# "≡2⊸↑)¨⊸/md
-  "Wrong number of titles in "‿𝕩 ∾⊸! 1=≠h1
-  head ← "head" Html lf∾JoinLines "  "⊸∾¨⟨
-    "shortcut icon' type='image/x-icon" Link "favicon.ico"
-    "stylesheet" Link "style.css"
-    "title" Html ("BQN"∾":"⊸(¬∘∊/⊣)∾" "∾⊢)⍟(¬·∨´"BQN"⍷⊢) Clean 2↓⊑h1
-  ⟩
+  # h1 ← (2≤≠)◶0‿("# "≡2⊸↑)¨⊸/md
+  # "Wrong number of titles in "‿𝕩 ∾⊸! 1=≠h1
+  # head ← "head" Html lf∾JoinLines "  "⊸∾¨⟨
+  #   "shortcut icon' type='image/x-icon" Link "favicon.ico"
+  #   "stylesheet" Link "style.css"
+  #   "title" Html ("BQN"∾":"⊸(¬∘∊/⊣)∾" "∾⊢)⍟(¬·∨´"BQN"⍷⊢) Clean 2↓⊑h1
+  # ⟩
+  head ← "" 
   repo ← "("∾")"∾˜ "a href='"‿repoURL‿"'" ∾⊸Html "github"
   crumbs ← up ("a href='"∾∾⟜"index.html'")⊸Html¨○((-isInd)⊸↓) (<"BQN")»parts
   nav ← RQ "div class='nav'" Html 3↓∾ " / "⊸∾¨ repo <⊸∾ crumbs
   front ← head ∾○(∾⟜lf) nav
-  ("docs/"∾fileout) •file.Chars front ∾ out
+  ("docs/"∾fileout) •file.Chars •Show front ∾ out
 }
 
-{⟨⟩: •Out "Usage: bqn md.bqn [filenames]"; ConvertFile¨} •args
+{⟨⟩: •Out "Usage: bqn md.bqn [filenames]"; ConvertFile¨𝕩} •args
 
 Markdown  # Used by tester test/markdown.bqn
