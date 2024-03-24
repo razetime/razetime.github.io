@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Installing FreeBSD in VMWare Workstation 17 Player</title>
+
+  <link rel="alternate" type="application/atom+xml" title="Razetime" href="/feed.xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fenix&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+  />
+  <link rel="stylesheet" href="/style.css" />
+  
+</head>
+<body>
+  
+  <div class="container"><br>
+    <a href="/" style="padding-right: 0.5em;">← Home</a>
+    <a href="/blog">← Back to Blog</a>
+    <br><h2>Installing FreeBSD in VMWare Workstation 17 Player</h2><p>Based on FreeBSD 14.0 release, VMWare Workstation 17 Player 17.5.1 build-23298084</p>
+
+<p>Since it was a bit unobvious and the FreeBSD Manual does not detail on it I am
+putting this here for now.</p>
+
+<p>Get a vmdk file from https://www.freebsd.org/where/
+and boot up VMWare Workstation.</p>
+
+<ol>
+  <li>Start by creating a new VM. <img src="img/vmtut1.png" alt="VMWare Workstation Startup Screen" /></li>
+  <li>Select the guest operating system: I chose Other, and selected FreeBSD 14 64-bit.</li>
+  <li>Use the default storage location and <em>Store the disk as a single file.</em>
+<img src="img/vmtut2.png" alt="Store the disk as a single file is selected" /></li>
+  <li>In the next page, simply click <em>Finish</em>.</li>
+  <li>Right click your new VM and open its settings. A hard disk should be present.
+Check the location of the disk file, and replace it with your downloaded vmdk
+from Step 1.</li>
+  <li>Boot your FreeBSD VM. Right now the only user on your FreeBSD system is root,
+and root will have no password. Set the password and configure a user for
+yourself (detailed in the manual), as it is better to be safe than sorry.</li>
+</ol>
+
+<p>Enjoy your local FreeBSD install.</p>
+</div>
+</body>
+</html>

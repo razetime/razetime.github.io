@@ -1,4 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://razetime.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://razetime.github.io/" rel="alternate" type="text/html" /><updated>2023-11-24T12:20:23+08:00</updated><id>https://razetime.github.io/feed.xml</id><title type="html">Razetime</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Exploring Z-order in BQN</title><link href="https://razetime.github.io/blog/2023/11/22/bqn-z-order.html" rel="alternate" type="text/html" title="Exploring Z-order in BQN" /><published>2023-11-22T00:00:00+08:00</published><updated>2023-11-22T00:00:00+08:00</updated><id>https://razetime.github.io/blog/2023/11/22/bqn-z-order</id><content type="html" xml:base="https://razetime.github.io/blog/2023/11/22/bqn-z-order.html"><![CDATA[<p><em>The code for this article can be found on
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://razetime.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://razetime.github.io/" rel="alternate" type="text/html" /><updated>2024-03-24T23:37:48+08:00</updated><id>https://razetime.github.io/feed.xml</id><title type="html">Razetime</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Installing FreeBSD in VMWare Workstation 17 Player</title><link href="https://razetime.github.io/blog/2024/03/16/vmware-freebsd.html" rel="alternate" type="text/html" title="Installing FreeBSD in VMWare Workstation 17 Player" /><published>2024-03-16T00:00:00+08:00</published><updated>2024-03-16T00:00:00+08:00</updated><id>https://razetime.github.io/blog/2024/03/16/vmware-freebsd</id><content type="html" xml:base="https://razetime.github.io/blog/2024/03/16/vmware-freebsd.html"><![CDATA[<p>Based on FreeBSD 14.0 release, VMWare Workstation 17 Player 17.5.1 build-23298084</p>
+
+<p>Since it was a bit unobvious and the FreeBSD Manual does not detail on it I am
+putting this here for now.</p>
+
+<p>Get a vmdk file from https://www.freebsd.org/where/
+and boot up VMWare Workstation.</p>
+
+<ol>
+  <li>Start by creating a new VM. <img src="img/vmtut1.png" alt="VMWare Workstation Startup Screen" /></li>
+  <li>Select the guest operating system: I chose Other, and selected FreeBSD 14 64-bit.</li>
+  <li>Use the default storage location and <em>Store the disk as a single file.</em>
+<img src="img/vmtut2.png" alt="Store the disk as a single file is selected" /></li>
+  <li>In the next page, simply click <em>Finish</em>.</li>
+  <li>Right click your new VM and open its settings. A hard disk should be present.
+Check the location of the disk file, and replace it with your downloaded vmdk
+from Step 1.</li>
+  <li>Boot your FreeBSD VM. Right now the only user on your FreeBSD system is root,
+and root will have no password. Set the password and configure a user for
+yourself (detailed in the manual), as it is better to be safe than sorry.</li>
+</ol>
+
+<p>Enjoy your local FreeBSD install.</p>]]></content><author><name></name></author><category term="blog" /><category term="computer" /><summary type="html"><![CDATA[Based on FreeBSD 14.0 release, VMWare Workstation 17 Player 17.5.1 build-23298084]]></summary></entry><entry><title type="html">Exploring Z-order in BQN</title><link href="https://razetime.github.io/blog/2023/11/22/bqn-z-order.html" rel="alternate" type="text/html" title="Exploring Z-order in BQN" /><published>2023-11-22T00:00:00+08:00</published><updated>2023-11-22T00:00:00+08:00</updated><id>https://razetime.github.io/blog/2023/11/22/bqn-z-order</id><content type="html" xml:base="https://razetime.github.io/blog/2023/11/22/bqn-z-order.html"><![CDATA[<p><em>The code for this article can be found on
 <a href="https://github.com/razetime/bqnforklift">Github</a>.</em></p>
 
 <p>In my coursework for spatial databases, we came upon the z-order curve, a
@@ -563,108 +585,4 @@ the bullet hell bosses, which do occasionally come up with impossible patterns.<
 <p>My favourite parts of this game among the many beautiful stages was the LISA the painful stage (hehe Lois I’m a JOY MUTANT),
 the one where you play Simon Says with the rock, and the ticking time bomb. Even in the sheer variety of platforming challenges
 available, it doesn’t compromise on creativity or its sense of balance. Even among the other games I’ve been playing lately, it
-felt incredibly fulfilling.</p>]]></content><author><name></name></author><category term="blog" /><summary type="html"><![CDATA[Despite my liking for watching fangames, I had always been afraid of playing them.]]></summary></entry><entry><title type="html">Lil and Advent of Code</title><link href="https://razetime.github.io/blog/2022/12/31/lil-aoc.html" rel="alternate" type="text/html" title="Lil and Advent of Code" /><published>2022-12-31T00:00:00+08:00</published><updated>2022-12-31T00:00:00+08:00</updated><id>https://razetime.github.io/blog/2022/12/31/lil-aoc</id><content type="html" xml:base="https://razetime.github.io/blog/2022/12/31/lil-aoc.html"><![CDATA[<p>This year’s Advent of code language was Lil. I skipped day 16, 19, 22 part 2, 24 and 25.</p>
-
-<p>This year I figured I shouldn’t put too much pressure on myself, so I didn’t solve anything that took more than 3 hours. I was 
-solving the problems in Lil, using the <strong>CLil</strong> implementation. I usually post my solutions on reddit, so if you’ve seen me on
-the threads, hi!</p>
-
-<h6 id="lil-vs-other-array-languages-in-aoc">Lil vs other Array languages in AOC</h6>
-
-<p>The APL crowd on reddit every year usually consists of /u/jayfoad, /u/voidhawk, and a few newcomers (/u/jaybosamiya has been there
-since last year). Advent of Code usually isn’t amazing for array languages, so it’s a good place to check how well you can make
-things work, gauge how well array languages fit with your methods of thinking.</p>
-
-<p>An honorable mention to /u/TeddyDD93, who was also solving in Lil till Day 6.</p>
-
-<p>This year has copious amount of simulation and pathfinding, both of which need some level of involvement to express well in array
-languages. <a href="https://futhark-lang.org/blog/2022-12-25-reflections-on-advent-of-code.html">Troels Henriksen</a> has stated that this
-year’s problems allowed for meaningful parallel computation, and I hope I managed to do some justice to that.</p>
-
-<p>The most common problems in AOC arise from having to do one thing at a time: imperative algorithms, lots of mutation, or something
-along those lines. Lil merges the ideas of Lua with K, ending up with a frankenstein that is really fun to use. Lil mainly
-differs in the lua aspect, having explicit loops with good syntax:</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>each x in arr/dict/table
-end
-while x
-end
-</code></pre></div></div>
-<p>The parts where Lil is like an ordinary scripting language are painstakingly integrated into the array language hidden inside it:
-all tables, dicts, lists are treated equally in loops and vectorized operations. Lil is also juggling these ideas along with the
-ideas present in Decker, its parent environment.</p>
-
-<p>Lil sounds great for advent of code so far, having dictionaries and lists, almost pythonic in nature, but Lil is also made to have
-as few errors as possible. It is of note that I only ever had two types of errors turn up during December:</p>
-<ul>
-  <li>Syntax errors (more often than not, from multiple <code class="language-plaintext highlighter-rouge">end</code>s)</li>
-  <li>Segmentation faults (implementation issues, or me fumbling with array interfaces)</li>
-</ul>
-
-<p>This is because <em>basically</em> everything else that doesn’t make sense to Lil always returns a 0. Sometimes <code class="language-plaintext highlighter-rouge">""</code>. Regardless, this
-causes a lot of confusion in code cause you have no idea where you created a zero. One zero in a weird place creates newer, funnier
-zeroes everywhere. Print debugging with <code class="language-plaintext highlighter-rouge">show[]</code> is useful, just like in every array language.</p>
-
-<p>Lil is only mildly frustrating due to the above problem, my main pet peeve was that it was so long to write and rewrite array 
-oriented things in it. Something like <code class="language-plaintext highlighter-rouge">&amp;'</code> in K becomes</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>each x in lst
-  extract index where value from x
-end
-</code></pre></div></div>
-<p>Conciseness is a boon, and it became much more obvious when I rewrote the solutions in BQN. Lil also doesn’t contain many K
-primitives due to arbitrary design constraints, but K’s features are very much present just in more verbose ways. Factoring out
-these primitives into functions is useful, but it results in the Q problem: you have so. many. square brackets.</p>
-
-<p>Speaking of arbitrary design constraints, <code class="language-plaintext highlighter-rouge">else if</code> is not present in lil, which led me to a lot of cases where
-<code class="language-plaintext highlighter-rouge">end end end end end</code> became a common occurrence. If it weren’t so funny, I probably would have quit using lil for Advent of
-Code.</p>
-
-<h5 id="the-lil-experience">The Lil Experience</h5>
-<p>Lil overall is a very competent scripting language. You can load your own library functions from different files with</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>libname:eval[read["lib.lil"]].vars
-</code></pre></div></div>
-
-<p>lilt’s <code class="language-plaintext highlighter-rouge">eval[]</code> is a bit weird, however, and doesn’t have native functions available. Always 
-make sure to return a string for formatting helpers, so you can print it in your actual program.</p>
-
-<p><code class="language-plaintext highlighter-rouge">parse</code> is really versatile, and it works extremely well on a variety of problems. <code class="language-plaintext highlighter-rouge">split</code> and <code class="language-plaintext highlighter-rouge">parse</code> together were easy pickings
-for input parsing <em>and</em> validation for most of the days. I wish I could specify repeating patterns, but that is obviously too
-much to be asking from lil. <code class="language-plaintext highlighter-rouge">glguy</code> from the <code class="language-plaintext highlighter-rouge">#adventofcode</code> IRC on libera.chat had an interesting library that did so.</p>
-
-<p>Dictionaries are terrible for performance. They are <em>ordered</em> sequences of pairings between keys and values, so lookup is painfully long. They
-are still worth using, just in limited amounts. I should have made my own hashmap implementation or a tree based implementation,
-but I realized that I needed faster ones too late.</p>
-
-<p><code class="language-plaintext highlighter-rouge">each</code> loops are also slow in the long term. I recommend <code class="language-plaintext highlighter-rouge">each</code> only if you plan on using every intermediate result. <code class="language-plaintext highlighter-rouge">while</code> loops
-with counters are the way to go for most things, especially useful in the simulation tasks where you’re doing thousands of 
-iterations.</p>
-
-<p><code class="language-plaintext highlighter-rouge">in</code> is a vectorizing binary operator, so you cannot check if a list is present in a list of lists. You’ll need a combination of
-<code class="language-plaintext highlighter-rouge">each</code>, <code class="language-plaintext highlighter-rouge">~</code> and <code class="language-plaintext highlighter-rouge">max</code> to get the same result.</p>
-
-<p>Lil overall is pretty slow, and it has a lot of leeway for optimization. Using it for Advent of Code in itself is a challenge,
-because it is made to be small and cozy, mainly to fit well with Decker. I did intend on making a visualization for one of the 
-days, but it got too time consuming to solve the problems themselves. Some days took <em>very</em> long to run, and it was obvious that it was not smart to wait more than
-an hour to wait for day 16 to execute and potentially provide a wrong result. It was still quite fun, and I might actually do it again,
-if I feel like testing my patience.</p>
-
-<p>A big thanks to all the people this year who made Advent of Code a little less lonely and a little easier to understand and solve.
-Kacarott, chunes, gifti from Factor, hyperneutrino, Unrelated String, emanresu, Aiden Chow from Stack Exchange, Lyricly and 
-umnikos from Esolangs. Most importantly, thanks to John Earnest for making such a cool environment, and providing helpful support
-for it throughout November and December. I hope all of you had a great December, and I wish that you have a great year ahead in 2023.</p>
-
-<p><strong>Advent of Code Links</strong></p>
-<ul>
-  <li><a href="https://github.com/razetime/aoc">My Solutions</a></li>
-  <li><a href="https://mlochbaum.github.io/BQN/community/aoc.html">BQN solvers</a></li>
-  <li><a href="https://k.miraheze.org/wiki/Advent_of_Code">K solvers</a></li>
-  <li><a href="https://apl.wiki/Advent_of_Code#Individuals%27_solutions">APL solvers</a></li>
-</ul>
-
-<p><strong>Decker links</strong></p>
-<ul>
-  <li><a href="https://beyondloom.com/decker">Decker</a></li>
-  <li><a href="https://beyondloom.com/decker/lil.html">Lil documentation</a>, effectively my bible for this month</li>
-  <li><a href="https://itch.io/jam/decktember/entries">Decktember submissions</a></li>
-  <li><a href="https://github.com/1jss/awesome-decker/issues">Awesome Decker</a></li>
-  <li><a href="https://www.arraycast.com/episodes/episode43-john-earnest-decker">John Earnest on the Array Cast, Dec 23</a></li>
-</ul>]]></content><author><name></name></author><category term="blog" /><summary type="html"><![CDATA[This year’s Advent of code language was Lil. I skipped day 16, 19, 22 part 2, 24 and 25.]]></summary></entry></feed>
+felt incredibly fulfilling.</p>]]></content><author><name></name></author><category term="blog" /><summary type="html"><![CDATA[Despite my liking for watching fangames, I had always been afraid of playing them.]]></summary></entry></feed>
